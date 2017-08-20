@@ -390,7 +390,3 @@ class OCamlDomain(sphinx.domains.Domain):
             return sphinx.util.nodes.make_refnode(builder, fromdocname, docname, target, contnode, None)
         else:
             return None
-
-
-def setup(app):
-    app.add_domain(OCamlDomain)
