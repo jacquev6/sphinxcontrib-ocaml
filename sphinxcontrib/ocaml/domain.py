@@ -3,7 +3,8 @@
 # Copyright 2017 Vincent Jacques <vincent@vincent-jacques.net>
 
 """
-A `Sphinx <http://www.sphinx-doc.org>`_ extension providing an `OCaml` `domain <http://www.sphinx-doc.org/en/stable/domains.html>`_.
+A `Sphinx <http://www.sphinx-doc.org>`_ extension providing an `OCaml`
+`domain <http://www.sphinx-doc.org/en/stable/domains.html>`_.
 """
 
 import itertools
@@ -71,7 +72,9 @@ class Directive(docutils.parsers.rst.Directive):
 
         contents_node = desc_content()
         if self.contents_separator is not None:
-            self.env.domaindata[OCamlDomain.name]["module_stack"].append(self.current_module_prefix() + self.arguments[0] + self.contents_separator)
+            self.env.domaindata[OCamlDomain.name]["module_stack"].append(
+                self.current_module_prefix() + self.arguments[0] + self.contents_separator
+            )
         self.state.nested_parse(self.content, self.content_offset, contents_node)
         if self.contents_separator is not None:
             self.env.domaindata[OCamlDomain.name]["module_stack"].pop()
@@ -220,7 +223,10 @@ class Include(Directive):
     contents_separator = None
 
     def get_id(self):
-        return "incl {}{}".format(self.current_module_prefix(), self.env.new_serialno("include {}".format(self.current_module_prefix())))
+        return "incl {}{}".format(
+            self.current_module_prefix(),
+            self.env.new_serialno("include {}".format(self.current_module_prefix())),
+        )
 
     def get_index_entry(self):
         return None
@@ -290,7 +296,8 @@ class Type(Atom):
     role = "typ"
     object_type = "type"
     # @todo Add constructors and labels in indexes
-    # @todo Parse type and display it as a multiline desc_signature if needed (variant with several constructors or record with several labels)
+    # @todo Parse type and display it as a multiline desc_signature if needed
+    # (variant with several constructors or record with several labels)
 
     option_spec = {
         "noindex": docutils.parsers.rst.directives.flag,
@@ -381,7 +388,15 @@ class OCamlDomain(sphinx.domains.Domain):
         Type.role: {},
         Exception.role: {},
     }
-    # @todo Add indexes for modules (maybe specific indexes for structures and functors?), module types (maybe for signatures and functors?), values, types, exceptions, constructors, labels, functor parameters
+    # @todo Add indexes for:
+    # - modules (maybe specific indexes for structures and functors?)
+    # - module types (maybe for signatures and functors?)
+    # - values
+    # - types
+    # - exceptions
+    # - constructors
+    # - labels
+    # - functor parameters
 
     def resolve_xref(self, env, fromdocname, builder, role, target, node, contnode):
         docname = self.data[role].get(target)

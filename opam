@@ -1,0 +1,24 @@
+opam-version: "1.2"
+name: "sphinx-ocaml"
+version: "0.1.0"
+maintainer: "Vincent Jacques <vincent@vincent-jacques.net>"
+authors: "Vincent Jacques <vincent@vincent-jacques.net>"
+homepage: "https://jacquev6.github.io/sphinx-ocaml/"
+dev-repo: "https://github.com/jacquev6/sphinx-ocaml.git"
+bug-reports: "http://github.com/jacquev6/sphinx-ocaml/issues/"
+available: [ocaml-version = "4.05.0"]
+build: [
+  ["sh" "-c" "cd autoocamldoc; ocamlbuild -use-ocamlfind autoocamldoc.native"]
+]
+install: [
+  ["cp" "autoocamldoc/_build/autoocamldoc.native" "%{prefix}%/bin/autoocamldoc"]
+]
+remove: [
+  ["rm" "-f" "%{prefix}%/bin/autoocamldoc"]
+]
+depends: [
+  "ocamlbuild" {build}
+  "ocamlfind" {build}
+  "General"
+  "yojson"
+]
