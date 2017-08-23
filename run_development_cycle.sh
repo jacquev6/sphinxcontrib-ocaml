@@ -26,6 +26,12 @@ echo
 rm -f bisect????.out
 coverage3 erase
 
+rm -rf test/output build/test_doctrees
+sphinx-build test/input test/output -d build/test_doctrees
+echo
+echo "See test documentation in $(pwd)/test/output/index.html"
+echo
+
 pep8 --max-line-length=120 sphinxcontrib *.py doc/conf.py
 
 # Install and use to build doc

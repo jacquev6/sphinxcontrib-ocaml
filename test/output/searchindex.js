@@ -1,0 +1,1 @@
+Search.setIndex({docnames:["index"],envversion:53,filenames:["index.rst"],objects:{},objnames:{},objtypes:{},terms:{index:0,page:0,search:0},titles:["Test project for Sphinx OCaml"],titleterms:{indic:0,ocaml:0,project:0,sphinx:0,tabl:0,test:0}})
