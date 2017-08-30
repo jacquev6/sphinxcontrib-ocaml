@@ -47,7 +47,6 @@ opam reinstall --yes sphinx-ocaml
 rm -rf docs build/sphinx
 ./setup.py build_sphinx
 cp -r build/sphinx/html docs
-touch docs/.nojekyll
 rm -f docs/.buildinfo
 echo
 echo "See documentation in $(pwd)/docs/index.html"

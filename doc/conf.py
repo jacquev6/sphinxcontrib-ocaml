@@ -10,6 +10,9 @@ copyright = ('2017 {} <script>var jacquev6_ribbon_github="{}"</script>'.format(a
 master_doc = "index"
 extensions = []
 
+# http://www.sphinx-doc.org/en/stable/ext/githubpages.html
+extensions.append("sphinx.ext.githubpages")
+
 # https://github.com/bitprophet/alabaster
 html_sidebars = {
     "**": ["about.html", "navigation.html", "searchbox.html"],
