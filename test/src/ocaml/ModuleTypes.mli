@@ -170,4 +170,4 @@ end
 
 include MT
 
-(** A reference to a module type: :modtyp:`tests/ModuleTypes.Signature`. *)
+(** A reference to a module type: :modtyp:`test/src/ocaml/ModuleTypes.Signature`. *)

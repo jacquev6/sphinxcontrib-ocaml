@@ -163,4 +163,4 @@ end
 
 include MT
 
-(** A reference to a module: :mod:`tests/Modules.Signature`. *)
+(** A reference to a module: :mod:`test/src/ocaml/Modules.Signature`. *)

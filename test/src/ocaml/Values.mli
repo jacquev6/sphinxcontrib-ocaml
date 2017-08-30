@@ -14,4 +14,4 @@ end
 
 include MT
 
-(** A reference to a value: :val:`tests/Values.v`. *)
+(** A reference to a value: :val:`test/src/ocaml/Values.v`. *)

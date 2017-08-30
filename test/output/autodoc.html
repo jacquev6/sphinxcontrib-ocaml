@@ -41,7 +41,3228 @@
             
   <div class="section" id="autodoc">
 <h1>Autodoc<a class="headerlink" href="#autodoc" title="Permalink to this headline">¶</a></h1>
-<p>Yup</p>
+<dl class="module">
+<dt id="mod test/src/ocaml/Exceptions">
+<em class="property">module </em><code class="descname">test/src/ocaml/Exceptions</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Exceptions" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="module_type">
+<dt id="modtyp test/src/ocaml/Exceptions.MT">
+<em class="property">module type </em><code class="descname">MT</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/Exceptions.MT" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="exception">
+<dt id="exn test/src/ocaml/Exceptions.MT:Simple">
+<em class="property">exception </em><code class="descname">Simple</code><a class="headerlink" href="#exn test/src/ocaml/Exceptions.MT:Simple" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for Simple</p>
+<p>Doc’ for Simple</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="exn test/src/ocaml/Exceptions.MT:SinglePayload">
+<em class="property">exception </em><code class="descname">SinglePayload</code><em class="property"> of int</em><a class="headerlink" href="#exn test/src/ocaml/Exceptions.MT:SinglePayload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for SinglePayload</p>
+<p>Doc’ for SinglePayload</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="exn test/src/ocaml/Exceptions.MT:SeveralPayload">
+<em class="property">exception </em><code class="descname">SeveralPayload</code><em class="property"> of int * float * string</em><a class="headerlink" href="#exn test/src/ocaml/Exceptions.MT:SeveralPayload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for SeveralPayload</p>
+<p>Doc’ for SeveralPayload</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="exn test/src/ocaml/Exceptions.MT:TuplePayload">
+<em class="property">exception </em><code class="descname">TuplePayload</code><em class="property"> of (int * float * string)</em><a class="headerlink" href="#exn test/src/ocaml/Exceptions.MT:TuplePayload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for TuplePayload</p>
+<p>Doc’ for TuplePayload</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="exn test/src/ocaml/Exceptions.MT:RecordPayload">
+<em class="property">exception </em><code class="descname">RecordPayload</code><em class="property"> of {a: int; mutable b: float}</em><a class="headerlink" href="#exn test/src/ocaml/Exceptions.MT:RecordPayload" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Label a:</th><td class="field-body">Doc for RecordPayload.a</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Label b:</th><td class="field-body">Doc for RecordPayload.b</td>
+</tr>
+</tbody>
+</table>
+<p>Doc for RecordPayload</p>
+<p>Doc’ for RecordPayload</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="incl">
+<dt id="incl test/src/ocaml/Exceptions.0">
+<em class="property">include </em><code class="descname">MT</code><em class="property"> = sig</em><a class="headerlink" href="#incl test/src/ocaml/Exceptions.0" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="exception">
+<dt id="exn test/src/ocaml/Exceptions.Simple">
+<em class="property">exception </em><code class="descname">Simple</code><a class="headerlink" href="#exn test/src/ocaml/Exceptions.Simple" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for Simple</p>
+<p>Doc’ for Simple</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="exn test/src/ocaml/Exceptions.Hidden">
+<em class="property">exception </em><code class="descname">Hidden</code><a class="headerlink" href="#exn test/src/ocaml/Exceptions.Hidden" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for Hidden</p>
+<p>Doc’ for Hidden</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="exn test/src/ocaml/Exceptions.SinglePayload">
+<em class="property">exception </em><code class="descname">SinglePayload</code><em class="property"> of int</em><a class="headerlink" href="#exn test/src/ocaml/Exceptions.SinglePayload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for SinglePayload</p>
+<p>Doc’ for SinglePayload</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="exn test/src/ocaml/Exceptions.SeveralPayload">
+<em class="property">exception </em><code class="descname">SeveralPayload</code><em class="property"> of int * float * string</em><a class="headerlink" href="#exn test/src/ocaml/Exceptions.SeveralPayload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for SeveralPayload</p>
+<p>Doc’ for SeveralPayload</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="exn test/src/ocaml/Exceptions.TuplePayload">
+<em class="property">exception </em><code class="descname">TuplePayload</code><em class="property"> of (int * float * string)</em><a class="headerlink" href="#exn test/src/ocaml/Exceptions.TuplePayload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for TuplePayload</p>
+<p>Doc’ for TuplePayload</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="exn test/src/ocaml/Exceptions.RecordPayload">
+<em class="property">exception </em><code class="descname">RecordPayload</code><em class="property"> of {a: int; mutable b: float}</em><a class="headerlink" href="#exn test/src/ocaml/Exceptions.RecordPayload" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Label a:</th><td class="field-body">Doc for RecordPayload.a</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Label b:</th><td class="field-body">Doc for RecordPayload.b</td>
+</tr>
+</tbody>
+</table>
+<p>Doc for RecordPayload</p>
+<p>Doc’ for RecordPayload</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<p>A reference to an exception: <a class="reference internal" href="#exn test/src/ocaml/Exceptions.Simple"><code class="xref ocaml ocaml-exn docutils literal"><span class="pre">test/src/ocaml/Exceptions.Simple</span></code></a>.</p>
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Includes">
+<em class="property">module </em><code class="descname">test/src/ocaml/Includes</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Includes" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="module_type">
+<dt id="modtyp test/src/ocaml/Includes.MT">
+<em class="property">module type </em><code class="descname">MT</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/Includes.MT" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="incl">
+<dt id="incl test/src/ocaml/Includes.MT:0">
+<em class="property">include </em><em class="property">sig</em><a class="headerlink" href="#incl test/src/ocaml/Includes.MT:0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for include</p>
+<p>Doc’ for include</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/Includes.MT:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/Includes.MT:t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Includes.MT:A">
+<em class="property">module </em><code class="descname">A</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Includes.MT:A" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="incl">
+<dt id="incl test/src/ocaml/Includes.MT:A.0">
+<em class="property">include </em><code class="descname">ModuleType</code><em class="property"> = sig</em><a class="headerlink" href="#incl test/src/ocaml/Includes.MT:A.0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for include</p>
+<p>Doc’ for include</p>
+<p>Doc for ModuleType</p>
+<p>Doc’ for ModuleType</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/Includes.MT:A.t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/Includes.MT:A.t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleType.t</p>
+<p>Doc’ for ModuleType.t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Includes.MT:B">
+<em class="property">module </em><code class="descname">B</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Includes.MT:B" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="incl">
+<dt id="incl test/src/ocaml/Includes.MT:B.0">
+<em class="property">include </em><code class="descname">ModuleTypeAlias</code><em class="property"> = sig</em><a class="headerlink" href="#incl test/src/ocaml/Includes.MT:B.0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for indirect include</p>
+<p>Doc’ for indirect include</p>
+<p>Doc for ModuleTypeAlias</p>
+<p>Doc’ for ModuleTypeAlias</p>
+<p>Doc for ModuleType</p>
+<p>Doc’ for ModuleType</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/Includes.MT:B.t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/Includes.MT:B.t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleType.t</p>
+<p>Doc’ for ModuleType.t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="incl">
+<dt id="incl test/src/ocaml/Includes.0">
+<em class="property">include </em><code class="descname">MT</code><em class="property"> = sig</em><a class="headerlink" href="#incl test/src/ocaml/Includes.0" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/Includes.t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/Includes.t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Includes.u">
+<em class="property">type </em><code class="descname">u</code><a class="headerlink" href="#typ test/src/ocaml/Includes.u" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/Includes.ModuleType">
+<em class="property">module type </em><code class="descname">ModuleType</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/Includes.ModuleType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleType</p>
+<p>Doc’ for ModuleType</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/Includes.ModuleType:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/Includes.ModuleType:t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleType.t</p>
+<p>Doc’ for ModuleType.t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Includes.A">
+<em class="property">module </em><code class="descname">A</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Includes.A" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/Includes.A.t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/Includes.A.t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleType.t</p>
+<p>Doc’ for ModuleType.t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/Includes.ModuleTypeAlias">
+<em class="property">module type </em><code class="descname">ModuleTypeAlias</code><em class="property"> = ModuleType = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/Includes.ModuleTypeAlias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleTypeAlias</p>
+<p>Doc’ for ModuleTypeAlias</p>
+<p>Doc for ModuleType</p>
+<p>Doc’ for ModuleType</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/Includes.ModuleTypeAlias:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/Includes.ModuleTypeAlias:t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleType.t</p>
+<p>Doc’ for ModuleType.t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Includes.B">
+<em class="property">module </em><code class="descname">B</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Includes.B" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/Includes.B.t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/Includes.B.t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleType.t</p>
+<p>Doc’ for ModuleType.t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/KnownBugModTypeNotFound">
+<em class="property">module </em><code class="descname">test/src/ocaml/KnownBugModTypeNotFound</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/KnownBugModTypeNotFound" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="module_type">
+<dt id="modtyp test/src/ocaml/KnownBugModTypeNotFound.A">
+<em class="property">module type </em><code class="descname">A</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/KnownBugModTypeNotFound.A" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="module_type">
+<dt id="modtyp test/src/ocaml/KnownBugModTypeNotFound.A:B">
+<em class="property">module type </em><code class="descname">B</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/KnownBugModTypeNotFound.A:B" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="module_type">
+<dt id="modtyp test/src/ocaml/KnownBugModTypeNotFound.A:B:C">
+<em class="property">module type </em><code class="descname">C</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/KnownBugModTypeNotFound.A:B:C" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/KnownBugModTypeNotFound.A:B:C:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/KnownBugModTypeNotFound.A:B:C:t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/KnownBugModTypeNotFound.A:B:Alias">
+<em class="property">module type </em><code class="descname">Alias</code><em class="property"> = C = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/KnownBugModTypeNotFound.A:B:Alias" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/KnownBugModTypeNotFound.A:B:Alias:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/KnownBugModTypeNotFound.A:B:Alias:t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="incl">
+<dt id="incl test/src/ocaml/KnownBugModTypeNotFound.0">
+<em class="property">include </em><code class="descname">A</code><em class="property"> = sig</em><a class="headerlink" href="#incl test/src/ocaml/KnownBugModTypeNotFound.0" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="module_type">
+<dt id="modtyp test/src/ocaml/KnownBugModTypeNotFound.B">
+<em class="property">module type </em><code class="descname">B</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/KnownBugModTypeNotFound.B" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="module_type">
+<dt id="modtyp test/src/ocaml/KnownBugModTypeNotFound.B:C">
+<em class="property">module type </em><code class="descname">C</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/KnownBugModTypeNotFound.B:C" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/KnownBugModTypeNotFound.B:C:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/KnownBugModTypeNotFound.B:C:t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<p>Known bug in autoocamldoc (we’d love some help from a compiler-libs expert): module type not found C</p>
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/ModuleTypes">
+<em class="property">module </em><code class="descname">test/src/ocaml/ModuleTypes</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/ModuleTypes" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.MT">
+<em class="property">module type </em><code class="descname">MT</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.MT" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.MT:Signature">
+<em class="property">module type </em><code class="descname">Signature</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.MT:Signature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for Signature</p>
+<p>Doc’ for Signature</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:Signature:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:Signature:t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.MT:Alias">
+<em class="property">module type </em><code class="descname">Alias</code><em class="property"> = Signature = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.MT:Alias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for Alias</p>
+<p>Doc’ for Alias</p>
+<p>Doc for Signature</p>
+<p>Doc’ for Signature</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:Alias:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:Alias:t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.MT:DoubleAlias">
+<em class="property">module type </em><code class="descname">DoubleAlias</code><em class="property"> = Alias = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.MT:DoubleAlias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for DoubleAlias</p>
+<p>Doc’ for DoubleAlias</p>
+<p>Doc for Alias</p>
+<p>Doc’ for Alias</p>
+<p>Doc for Signature</p>
+<p>Doc’ for Signature</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:DoubleAlias:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:DoubleAlias:t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.MT:Functor">
+<em class="property">module type </em><code class="descname">Functor</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.MT:Functor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for Functor</p>
+<p>Doc’ for Functor</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:Functor:A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:Functor:A$a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for a</p>
+<p>Doc’ for a</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:Functor:t">
+<em class="property">type </em><code class="descname">t</code><em class="property"> = A.a list</em><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:Functor:t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for t</p>
+<p>Doc’ for t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.MT:MultiFunctor">
+<em class="property">module type </em><code class="descname">MultiFunctor</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.MT:MultiFunctor" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:MultiFunctor:A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:MultiFunctor:A$a" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">B</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:MultiFunctor:B$b">
+<em class="property">type </em><code class="descname">b</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:MultiFunctor:B$b" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:MultiFunctor:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:MultiFunctor:t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.MT:FunctorAlias">
+<em class="property">module type </em><code class="descname">FunctorAlias</code><em class="property"> = Functor = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.MT:FunctorAlias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for FunctorAlias</p>
+<p>Doc’ for FunctorAlias</p>
+<p>Doc for Functor</p>
+<p>Doc’ for Functor</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:FunctorAlias:A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:FunctorAlias:A$a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for a</p>
+<p>Doc’ for a</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:FunctorAlias:t">
+<em class="property">type </em><code class="descname">t</code><em class="property"> = A.a list</em><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:FunctorAlias:t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for t</p>
+<p>Doc’ for t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.MT:DoubleFunctorAlias">
+<em class="property">module type </em><code class="descname">DoubleFunctorAlias</code><em class="property"> = FunctorAlias = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.MT:DoubleFunctorAlias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for DoubleFunctorAlias</p>
+<p>Doc’ for DoubleFunctorAlias</p>
+<p>Doc for FunctorAlias</p>
+<p>Doc’ for FunctorAlias</p>
+<p>Doc for Functor</p>
+<p>Doc’ for Functor</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:DoubleFunctorAlias:A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:DoubleFunctorAlias:A$a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for a</p>
+<p>Doc’ for a</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:DoubleFunctorAlias:t">
+<em class="property">type </em><code class="descname">t</code><em class="property"> = A.a list</em><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:DoubleFunctorAlias:t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for t</p>
+<p>Doc’ for t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.MT:FunctorWithIdentifierContents">
+<em class="property">module type </em><code class="descname">FunctorWithIdentifierContents</code><em class="property"> = Signature = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.MT:FunctorWithIdentifierContents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for FunctorWithIdentifierContents</p>
+<p>Doc’ for FunctorWithIdentifierContents</p>
+<p>Doc for Signature</p>
+<p>Doc’ for Signature</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:FunctorWithIdentifierContents:A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:FunctorWithIdentifierContents:A$a" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:FunctorWithIdentifierContents:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:FunctorWithIdentifierContents:t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.MT:FunctorWithIdentifierContentsAlias">
+<em class="property">module type </em><code class="descname">FunctorWithIdentifierContentsAlias</code><em class="property"> = FunctorWithIdentifierContents = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.MT:FunctorWithIdentifierContentsAlias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for FunctorWithIdentifierContentsAlias</p>
+<p>Doc’ for FunctorWithIdentifierContentsAlias</p>
+<p>Doc for FunctorWithIdentifierContents</p>
+<p>Doc’ for FunctorWithIdentifierContents</p>
+<p>Doc for Signature</p>
+<p>Doc’ for Signature</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:FunctorWithIdentifierContentsAlias:A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:FunctorWithIdentifierContentsAlias:A$a" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:FunctorWithIdentifierContentsAlias:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:FunctorWithIdentifierContentsAlias:t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.MT:FunctorWithIdentifierContentsDoubleAlias">
+<em class="property">module type </em><code class="descname">FunctorWithIdentifierContentsDoubleAlias</code><em class="property"> = FunctorWithIdentifierContentsAlias = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.MT:FunctorWithIdentifierContentsDoubleAlias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for FunctorWithIdentifierContentsDoubleAlias</p>
+<p>Doc’ for FunctorWithIdentifierContentsDoubleAlias</p>
+<p>Doc for FunctorWithIdentifierContentsAlias</p>
+<p>Doc’ for FunctorWithIdentifierContentsAlias</p>
+<p>Doc for FunctorWithIdentifierContents</p>
+<p>Doc’ for FunctorWithIdentifierContents</p>
+<p>Doc for Signature</p>
+<p>Doc’ for Signature</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:FunctorWithIdentifierContentsDoubleAlias:A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:FunctorWithIdentifierContentsDoubleAlias:A$a" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:FunctorWithIdentifierContentsDoubleAlias:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:FunctorWithIdentifierContentsDoubleAlias:t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.MT:ModuleTypeOf">
+<em class="property">module type </em><code class="descname">ModuleTypeOf</code><em class="property"> = module type of Module = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.MT:ModuleTypeOf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleTypeOf</p>
+<p>Doc’ for ModuleTypeOf</p>
+<p>Doc for Module</p>
+<p>Doc’ for Module</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:ModuleTypeOf:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:ModuleTypeOf:t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for t</p>
+<p>Doc’ for t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.MT:ModuleTypeOfFunctor">
+<em class="property">module type </em><code class="descname">ModuleTypeOfFunctor</code><em class="property"> = module type of FunctorModule = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.MT:ModuleTypeOfFunctor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleTypeOfFunctor</p>
+<p>Doc’ for ModuleTypeOfFunctor</p>
+<p>Doc for FunctorModule</p>
+<p>Doc’ for FunctorModule</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:ModuleTypeOfFunctor:A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:ModuleTypeOfFunctor:A$a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for a</p>
+<p>Doc’ for a</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:ModuleTypeOfFunctor:t">
+<em class="property">type </em><code class="descname">t</code><em class="property"> = A.a list</em><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:ModuleTypeOfFunctor:t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for t</p>
+<p>Doc’ for t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.MT:ModuleTypeOfMultiFunctor">
+<em class="property">module type </em><code class="descname">ModuleTypeOfMultiFunctor</code><em class="property"> = module type of MultiFunctorModule = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.MT:ModuleTypeOfMultiFunctor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleTypeOfMultiFunctor</p>
+<p>Doc’ for ModuleTypeOfMultiFunctor</p>
+<p>Doc for MultiFunctorModule</p>
+<p>Doc’ for MultiFunctorModule</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:ModuleTypeOfMultiFunctor:A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:ModuleTypeOfMultiFunctor:A$a" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">B</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:ModuleTypeOfMultiFunctor:B$b">
+<em class="property">type </em><code class="descname">b</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:ModuleTypeOfMultiFunctor:B$b" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:ModuleTypeOfMultiFunctor:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:ModuleTypeOfMultiFunctor:t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.MT:ModuleTypeOfStruct">
+<em class="property">module type </em><code class="descname">ModuleTypeOfStruct</code><em class="property"> = module type of struct ... end = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.MT:ModuleTypeOfStruct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleTypeOfStruct</p>
+<p>Doc’ for ModuleTypeOfStruct</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:ModuleTypeOfStruct:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:ModuleTypeOfStruct:t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for t</p>
+<p>Doc’ for t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.MT:ModuleTypeOfLiteralFunctor">
+<em class="property">module type </em><code class="descname">ModuleTypeOfLiteralFunctor</code><em class="property"> = module type of functor (...) -&gt; struct ... end = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.MT:ModuleTypeOfLiteralFunctor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleTypeOfLiteralFunctor</p>
+<p>Doc’ for ModuleTypeOfLiteralFunctor</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:ModuleTypeOfLiteralFunctor:A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:ModuleTypeOfLiteralFunctor:A$a" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:ModuleTypeOfLiteralFunctor:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:ModuleTypeOfLiteralFunctor:t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for t</p>
+<p>Doc’ for t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.MT:ModuleTypeOfApply">
+<em class="property">module type </em><code class="descname">ModuleTypeOfApply</code><em class="property"> = module type of FunctorModule(struct ... end) = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.MT:ModuleTypeOfApply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleTypeOfApply</p>
+<p>Doc’ for ModuleTypeOfApply</p>
+<p>Doc for FunctorModule</p>
+<p>Doc’ for FunctorModule</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:ModuleTypeOfApply:t">
+<em class="property">type </em><code class="descname">t</code><em class="property"> = int list</em><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:ModuleTypeOfApply:t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for t</p>
+<p>Doc’ for t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.MT:WithType">
+<em class="property">module type </em><code class="descname">WithType</code><em class="property"> = ForWithType with type t0 = int and type 'a t1 = 'a list and type ('a, 'b) t2 = ('a, 'b) result = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.MT:WithType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for WithType</p>
+<p>Doc’ for WithType</p>
+<p>Doc for ForWithType</p>
+<p>Doc’ for ForWithType</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:WithType:t0">
+<em class="property">type </em><code class="descname">t0</code><em class="property"> = int</em><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:WithType:t0" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/ModuleTypes.MT:WithType:v0">
+<em class="property">val </em><code class="descname">v0</code><em class="property">: t0</em><a class="headerlink" href="#val test/src/ocaml/ModuleTypes.MT:WithType:v0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v0</p>
+<p>Doc’ for v0</p>
+</dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:WithType:t1">
+<em class="property">type +'a </em><code class="descname">t1</code><em class="property"> = 'a list</em><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:WithType:t1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/ModuleTypes.MT:WithType:v1">
+<em class="property">val </em><code class="descname">v1</code><em class="property">: int t1</em><a class="headerlink" href="#val test/src/ocaml/ModuleTypes.MT:WithType:v1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v1</p>
+<p>Doc’ for v1</p>
+</dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:WithType:t2">
+<em class="property">type (+'a, +'b) </em><code class="descname">t2</code><em class="property"> = ('a, 'b) result</em><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:WithType:t2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/ModuleTypes.MT:WithType:v2">
+<em class="property">val </em><code class="descname">v2</code><em class="property">: (int, float) t2</em><a class="headerlink" href="#val test/src/ocaml/ModuleTypes.MT:WithType:v2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v2</p>
+<p>Doc’ for v2</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.MT:WithTypeSubst">
+<em class="property">module type </em><code class="descname">WithTypeSubst</code><em class="property"> = ForWithType with type t0 := int and type 'a t1 := 'a list and type ('a, 'b) t2 := ('a, 'b) result = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.MT:WithTypeSubst" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for WithTypeSubst</p>
+<p>Doc’ for WithTypeSubst</p>
+<p>Doc for ForWithType</p>
+<p>Doc’ for ForWithType</p>
+<dl class="val">
+<dt id="val test/src/ocaml/ModuleTypes.MT:WithTypeSubst:v0">
+<em class="property">val </em><code class="descname">v0</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/ModuleTypes.MT:WithTypeSubst:v0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v0</p>
+<p>Doc’ for v0</p>
+</dd></dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/ModuleTypes.MT:WithTypeSubst:v1">
+<em class="property">val </em><code class="descname">v1</code><em class="property">: int list</em><a class="headerlink" href="#val test/src/ocaml/ModuleTypes.MT:WithTypeSubst:v1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v1</p>
+<p>Doc’ for v1</p>
+</dd></dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/ModuleTypes.MT:WithTypeSubst:v2">
+<em class="property">val </em><code class="descname">v2</code><em class="property">: (int, float) result</em><a class="headerlink" href="#val test/src/ocaml/ModuleTypes.MT:WithTypeSubst:v2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v2</p>
+<p>Doc’ for v2</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.MT:WithModule">
+<em class="property">module type </em><code class="descname">WithModule</code><em class="property"> = ForWithModule with module M = MyM = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.MT:WithModule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for WithModule</p>
+<p>Doc’ for WithModule</p>
+<p>Doc for ForWithModule</p>
+<p>Doc’ for ForWithModule</p>
+<dl class="module">
+<dt id="mod test/src/ocaml/ModuleTypes.MT:WithModule:M">
+<em class="property">module </em><code class="descname">M</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/ModuleTypes.MT:WithModule:M" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for MyM</p>
+<p>Doc’ for MyM</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MT:WithModule:M.t">
+<em class="property">type </em><code class="descname">t</code><em class="property"> = int</em><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MT:WithModule:M.t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for t=int</p>
+<p>Doc’ for t=int</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/ModuleTypes.MT:WithModule:v">
+<em class="property">val </em><code class="descname">v</code><em class="property">: M.t</em><a class="headerlink" href="#val test/src/ocaml/ModuleTypes.MT:WithModule:v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v</p>
+<p>Doc’ for v</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.MT:WithModuleSubst">
+<em class="property">module type </em><code class="descname">WithModuleSubst</code><em class="property"> = ForWithModule with module M := MyM = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.MT:WithModuleSubst" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for WithModuleSubst</p>
+<p>Doc’ for WithModuleSubst</p>
+<p>Doc for ForWithModule</p>
+<p>Doc’ for ForWithModule</p>
+<dl class="val">
+<dt id="val test/src/ocaml/ModuleTypes.MT:WithModuleSubst:v">
+<em class="property">val </em><code class="descname">v</code><em class="property">: MyM.t</em><a class="headerlink" href="#val test/src/ocaml/ModuleTypes.MT:WithModuleSubst:v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v</p>
+<p>Doc’ for v</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="incl">
+<dt id="incl test/src/ocaml/ModuleTypes.0">
+<em class="property">include </em><code class="descname">MT</code><em class="property"> = sig</em><a class="headerlink" href="#incl test/src/ocaml/ModuleTypes.0" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.Signature">
+<em class="property">module type </em><code class="descname">Signature</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.Signature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for Signature</p>
+<p>Doc’ for Signature</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.Signature:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.Signature:t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.Alias">
+<em class="property">module type </em><code class="descname">Alias</code><em class="property"> = Signature = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.Alias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for Alias</p>
+<p>Doc’ for Alias</p>
+<p>Doc for Signature</p>
+<p>Doc’ for Signature</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.Alias:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.Alias:t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.DoubleAlias">
+<em class="property">module type </em><code class="descname">DoubleAlias</code><em class="property"> = Alias = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.DoubleAlias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for DoubleAlias</p>
+<p>Doc’ for DoubleAlias</p>
+<p>Doc for Alias</p>
+<p>Doc’ for Alias</p>
+<p>Doc for Signature</p>
+<p>Doc’ for Signature</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.DoubleAlias:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.DoubleAlias:t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.Functor">
+<em class="property">module type </em><code class="descname">Functor</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.Functor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for Functor</p>
+<p>Doc’ for Functor</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.Functor:A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.Functor:A$a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for a</p>
+<p>Doc’ for a</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.Functor:t">
+<em class="property">type </em><code class="descname">t</code><em class="property"> = A.a list</em><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.Functor:t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for t</p>
+<p>Doc’ for t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.MultiFunctor">
+<em class="property">module type </em><code class="descname">MultiFunctor</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.MultiFunctor" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MultiFunctor:A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MultiFunctor:A$a" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">B</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MultiFunctor:B$b">
+<em class="property">type </em><code class="descname">b</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MultiFunctor:B$b" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MultiFunctor:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MultiFunctor:t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.FunctorAlias">
+<em class="property">module type </em><code class="descname">FunctorAlias</code><em class="property"> = Functor = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.FunctorAlias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for FunctorAlias</p>
+<p>Doc’ for FunctorAlias</p>
+<p>Doc for Functor</p>
+<p>Doc’ for Functor</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.FunctorAlias:A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.FunctorAlias:A$a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for a</p>
+<p>Doc’ for a</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.FunctorAlias:t">
+<em class="property">type </em><code class="descname">t</code><em class="property"> = A.a list</em><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.FunctorAlias:t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for t</p>
+<p>Doc’ for t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.DoubleFunctorAlias">
+<em class="property">module type </em><code class="descname">DoubleFunctorAlias</code><em class="property"> = FunctorAlias = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.DoubleFunctorAlias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for DoubleFunctorAlias</p>
+<p>Doc’ for DoubleFunctorAlias</p>
+<p>Doc for FunctorAlias</p>
+<p>Doc’ for FunctorAlias</p>
+<p>Doc for Functor</p>
+<p>Doc’ for Functor</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.DoubleFunctorAlias:A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.DoubleFunctorAlias:A$a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for a</p>
+<p>Doc’ for a</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.DoubleFunctorAlias:t">
+<em class="property">type </em><code class="descname">t</code><em class="property"> = A.a list</em><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.DoubleFunctorAlias:t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for t</p>
+<p>Doc’ for t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.FunctorWithIdentifierContents">
+<em class="property">module type </em><code class="descname">FunctorWithIdentifierContents</code><em class="property"> = Signature = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.FunctorWithIdentifierContents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for FunctorWithIdentifierContents</p>
+<p>Doc’ for FunctorWithIdentifierContents</p>
+<p>Doc for Signature</p>
+<p>Doc’ for Signature</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.FunctorWithIdentifierContents:A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.FunctorWithIdentifierContents:A$a" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.FunctorWithIdentifierContents:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.FunctorWithIdentifierContents:t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.FunctorWithIdentifierContentsAlias">
+<em class="property">module type </em><code class="descname">FunctorWithIdentifierContentsAlias</code><em class="property"> = FunctorWithIdentifierContents = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.FunctorWithIdentifierContentsAlias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for FunctorWithIdentifierContentsAlias</p>
+<p>Doc’ for FunctorWithIdentifierContentsAlias</p>
+<p>Doc for FunctorWithIdentifierContents</p>
+<p>Doc’ for FunctorWithIdentifierContents</p>
+<p>Doc for Signature</p>
+<p>Doc’ for Signature</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.FunctorWithIdentifierContentsAlias:A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.FunctorWithIdentifierContentsAlias:A$a" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.FunctorWithIdentifierContentsAlias:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.FunctorWithIdentifierContentsAlias:t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.FunctorWithIdentifierContentsDoubleAlias">
+<em class="property">module type </em><code class="descname">FunctorWithIdentifierContentsDoubleAlias</code><em class="property"> = FunctorWithIdentifierContentsAlias = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.FunctorWithIdentifierContentsDoubleAlias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for FunctorWithIdentifierContentsDoubleAlias</p>
+<p>Doc’ for FunctorWithIdentifierContentsDoubleAlias</p>
+<p>Doc for FunctorWithIdentifierContentsAlias</p>
+<p>Doc’ for FunctorWithIdentifierContentsAlias</p>
+<p>Doc for FunctorWithIdentifierContents</p>
+<p>Doc’ for FunctorWithIdentifierContents</p>
+<p>Doc for Signature</p>
+<p>Doc’ for Signature</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.FunctorWithIdentifierContentsDoubleAlias:A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.FunctorWithIdentifierContentsDoubleAlias:A$a" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.FunctorWithIdentifierContentsDoubleAlias:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.FunctorWithIdentifierContentsDoubleAlias:t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/ModuleTypes.Module">
+<em class="property">module </em><code class="descname">Module</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/ModuleTypes.Module" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for Module</p>
+<p>Doc’ for Module</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.Module.t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.Module.t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for t</p>
+<p>Doc’ for t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.ModuleTypeOf">
+<em class="property">module type </em><code class="descname">ModuleTypeOf</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.ModuleTypeOf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleTypeOf</p>
+<p>Doc’ for ModuleTypeOf</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.ModuleTypeOf:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.ModuleTypeOf:t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for t</p>
+<p>Doc’ for t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/ModuleTypes.FunctorModule">
+<em class="property">module </em><code class="descname">FunctorModule</code><em class="property"> : Functor = sig</em><a class="headerlink" href="#mod test/src/ocaml/ModuleTypes.FunctorModule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for FunctorModule</p>
+<p>Doc’ for FunctorModule</p>
+<p>Doc for Functor</p>
+<p>Doc’ for Functor</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.FunctorModule.A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.FunctorModule.A$a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for a</p>
+<p>Doc’ for a</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.FunctorModule.t">
+<em class="property">type </em><code class="descname">t</code><em class="property"> = A.a list</em><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.FunctorModule.t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for t</p>
+<p>Doc’ for t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.ModuleTypeOfFunctor">
+<em class="property">module type </em><code class="descname">ModuleTypeOfFunctor</code><em class="property"> = Functor = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.ModuleTypeOfFunctor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleTypeOfFunctor</p>
+<p>Doc’ for ModuleTypeOfFunctor</p>
+<p>Doc for Functor</p>
+<p>Doc’ for Functor</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.ModuleTypeOfFunctor:A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.ModuleTypeOfFunctor:A$a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for a</p>
+<p>Doc’ for a</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.ModuleTypeOfFunctor:t">
+<em class="property">type </em><code class="descname">t</code><em class="property"> = A.a list</em><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.ModuleTypeOfFunctor:t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for t</p>
+<p>Doc’ for t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/ModuleTypes.MultiFunctorModule">
+<em class="property">module </em><code class="descname">MultiFunctorModule</code><em class="property"> : MultiFunctor = sig</em><a class="headerlink" href="#mod test/src/ocaml/ModuleTypes.MultiFunctorModule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for MultiFunctorModule</p>
+<p>Doc’ for MultiFunctorModule</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MultiFunctorModule.A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MultiFunctorModule.A$a" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">B</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MultiFunctorModule.B$b">
+<em class="property">type </em><code class="descname">b</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MultiFunctorModule.B$b" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MultiFunctorModule.t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MultiFunctorModule.t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.ModuleTypeOfMultiFunctor">
+<em class="property">module type </em><code class="descname">ModuleTypeOfMultiFunctor</code><em class="property"> = MultiFunctor = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.ModuleTypeOfMultiFunctor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleTypeOfMultiFunctor</p>
+<p>Doc’ for ModuleTypeOfMultiFunctor</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.ModuleTypeOfMultiFunctor:A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.ModuleTypeOfMultiFunctor:A$a" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">B</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.ModuleTypeOfMultiFunctor:B$b">
+<em class="property">type </em><code class="descname">b</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.ModuleTypeOfMultiFunctor:B$b" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.ModuleTypeOfMultiFunctor:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.ModuleTypeOfMultiFunctor:t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.ModuleTypeOfStruct">
+<em class="property">module type </em><code class="descname">ModuleTypeOfStruct</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.ModuleTypeOfStruct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleTypeOfStruct</p>
+<p>Doc’ for ModuleTypeOfStruct</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.ModuleTypeOfStruct:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.ModuleTypeOfStruct:t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for t</p>
+<p>Doc’ for t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.ModuleTypeOfLiteralFunctor">
+<em class="property">module type </em><code class="descname">ModuleTypeOfLiteralFunctor</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.ModuleTypeOfLiteralFunctor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleTypeOfLiteralFunctor</p>
+<p>Doc’ for ModuleTypeOfLiteralFunctor</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.ModuleTypeOfLiteralFunctor:A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.ModuleTypeOfLiteralFunctor:A$a" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.ModuleTypeOfLiteralFunctor:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.ModuleTypeOfLiteralFunctor:t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for t</p>
+<p>Doc’ for t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.ModuleTypeOfApply">
+<em class="property">module type </em><code class="descname">ModuleTypeOfApply</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.ModuleTypeOfApply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleTypeOfApply</p>
+<p>Doc’ for ModuleTypeOfApply</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.ModuleTypeOfApply:t">
+<em class="property">type </em><code class="descname">t</code><em class="property"> = int list</em><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.ModuleTypeOfApply:t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for t</p>
+<p>Doc’ for t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.ForWithType">
+<em class="property">module type </em><code class="descname">ForWithType</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.ForWithType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ForWithType</p>
+<p>Doc’ for ForWithType</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.ForWithType:t0">
+<em class="property">type </em><code class="descname">t0</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.ForWithType:t0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for t0</p>
+<p>Doc’ for t0</p>
+</dd></dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/ModuleTypes.ForWithType:v0">
+<em class="property">val </em><code class="descname">v0</code><em class="property">: t0</em><a class="headerlink" href="#val test/src/ocaml/ModuleTypes.ForWithType:v0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v0</p>
+<p>Doc’ for v0</p>
+</dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.ForWithType:t1">
+<em class="property">type 'a </em><code class="descname">t1</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.ForWithType:t1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for t1</p>
+<p>Doc’ for t1</p>
+</dd></dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/ModuleTypes.ForWithType:v1">
+<em class="property">val </em><code class="descname">v1</code><em class="property">: int t1</em><a class="headerlink" href="#val test/src/ocaml/ModuleTypes.ForWithType:v1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v1</p>
+<p>Doc’ for v1</p>
+</dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.ForWithType:t2">
+<em class="property">type ('a, 'b) </em><code class="descname">t2</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.ForWithType:t2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for t2</p>
+<p>Doc’ for t2</p>
+</dd></dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/ModuleTypes.ForWithType:v2">
+<em class="property">val </em><code class="descname">v2</code><em class="property">: (int, float) t2</em><a class="headerlink" href="#val test/src/ocaml/ModuleTypes.ForWithType:v2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v2</p>
+<p>Doc’ for v2</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.WithType">
+<em class="property">module type </em><code class="descname">WithType</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.WithType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for WithType</p>
+<p>Doc’ for WithType</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.WithType:t0">
+<em class="property">type </em><code class="descname">t0</code><em class="property"> = int</em><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.WithType:t0" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/ModuleTypes.WithType:v0">
+<em class="property">val </em><code class="descname">v0</code><em class="property">: t0</em><a class="headerlink" href="#val test/src/ocaml/ModuleTypes.WithType:v0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v0</p>
+<p>Doc’ for v0</p>
+</dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.WithType:t1">
+<em class="property">type +'a </em><code class="descname">t1</code><em class="property"> = 'a list</em><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.WithType:t1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/ModuleTypes.WithType:v1">
+<em class="property">val </em><code class="descname">v1</code><em class="property">: int t1</em><a class="headerlink" href="#val test/src/ocaml/ModuleTypes.WithType:v1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v1</p>
+<p>Doc’ for v1</p>
+</dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.WithType:t2">
+<em class="property">type (+'a, +'b) </em><code class="descname">t2</code><em class="property"> = ('a, 'b) result</em><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.WithType:t2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/ModuleTypes.WithType:v2">
+<em class="property">val </em><code class="descname">v2</code><em class="property">: (int, float) t2</em><a class="headerlink" href="#val test/src/ocaml/ModuleTypes.WithType:v2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v2</p>
+<p>Doc’ for v2</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.WithTypeSubst">
+<em class="property">module type </em><code class="descname">WithTypeSubst</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.WithTypeSubst" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for WithTypeSubst</p>
+<p>Doc’ for WithTypeSubst</p>
+<dl class="val">
+<dt id="val test/src/ocaml/ModuleTypes.WithTypeSubst:v0">
+<em class="property">val </em><code class="descname">v0</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/ModuleTypes.WithTypeSubst:v0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v0</p>
+<p>Doc’ for v0</p>
+</dd></dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/ModuleTypes.WithTypeSubst:v1">
+<em class="property">val </em><code class="descname">v1</code><em class="property">: int list</em><a class="headerlink" href="#val test/src/ocaml/ModuleTypes.WithTypeSubst:v1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v1</p>
+<p>Doc’ for v1</p>
+</dd></dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/ModuleTypes.WithTypeSubst:v2">
+<em class="property">val </em><code class="descname">v2</code><em class="property">: (int, float) result</em><a class="headerlink" href="#val test/src/ocaml/ModuleTypes.WithTypeSubst:v2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v2</p>
+<p>Doc’ for v2</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.ForWithModule">
+<em class="property">module type </em><code class="descname">ForWithModule</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.ForWithModule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ForWithModule</p>
+<p>Doc’ for ForWithModule</p>
+<dl class="module">
+<dt id="mod test/src/ocaml/ModuleTypes.ForWithModule:M">
+<em class="property">module </em><code class="descname">M</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/ModuleTypes.ForWithModule:M" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc of M</p>
+<p>Doc’ of M</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.ForWithModule:M.t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.ForWithModule:M.t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc of t</p>
+<p>Doc’ of t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/ModuleTypes.ForWithModule:v">
+<em class="property">val </em><code class="descname">v</code><em class="property">: M.t</em><a class="headerlink" href="#val test/src/ocaml/ModuleTypes.ForWithModule:v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v</p>
+<p>Doc’ for v</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/ModuleTypes.MyM">
+<em class="property">module </em><code class="descname">MyM</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/ModuleTypes.MyM" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for MyM</p>
+<p>Doc’ for MyM</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.MyM.t">
+<em class="property">type </em><code class="descname">t</code><em class="property"> = int</em><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.MyM.t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for t=int</p>
+<p>Doc’ for t=int</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.WithModule">
+<em class="property">module type </em><code class="descname">WithModule</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.WithModule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for WithModule</p>
+<p>Doc’ for WithModule</p>
+<dl class="module">
+<dt id="mod test/src/ocaml/ModuleTypes.WithModule:M">
+<em class="property">module </em><code class="descname">M</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/ModuleTypes.WithModule:M" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for MyM</p>
+<p>Doc’ for MyM</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/ModuleTypes.WithModule:M.t">
+<em class="property">type </em><code class="descname">t</code><em class="property"> = int</em><a class="headerlink" href="#typ test/src/ocaml/ModuleTypes.WithModule:M.t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for t=int</p>
+<p>Doc’ for t=int</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/ModuleTypes.WithModule:v">
+<em class="property">val </em><code class="descname">v</code><em class="property">: M.t</em><a class="headerlink" href="#val test/src/ocaml/ModuleTypes.WithModule:v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v</p>
+<p>Doc’ for v</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/ModuleTypes.WithModuleSubst">
+<em class="property">module type </em><code class="descname">WithModuleSubst</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/ModuleTypes.WithModuleSubst" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for WithModuleSubst</p>
+<p>Doc’ for WithModuleSubst</p>
+<dl class="val">
+<dt id="val test/src/ocaml/ModuleTypes.WithModuleSubst:v">
+<em class="property">val </em><code class="descname">v</code><em class="property">: MyM.t</em><a class="headerlink" href="#val test/src/ocaml/ModuleTypes.WithModuleSubst:v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v</p>
+<p>Doc’ for v</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<p>A reference to a module type: <a class="reference internal" href="#modtyp test/src/ocaml/ModuleTypes.Signature"><code class="xref ocaml ocaml-modtyp docutils literal"><span class="pre">test/src/ocaml/ModuleTypes.Signature</span></code></a>.</p>
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules">
+<em class="property">module </em><code class="descname">test/src/ocaml/Modules</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="module_type">
+<dt id="modtyp test/src/ocaml/Modules.MT">
+<em class="property">module type </em><code class="descname">MT</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/Modules.MT" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="module">
+<dt id="mod test/src/ocaml/Modules.MT:Signature">
+<em class="property">module </em><code class="descname">Signature</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.MT:Signature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for Signature</p>
+<p>Doc’ for Signature</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.MT:Signature.t1">
+<em class="property">type </em><code class="descname">t1</code><a class="headerlink" href="#typ test/src/ocaml/Modules.MT:Signature.t1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Floating doc</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.MT:Signature.t2">
+<em class="property">type </em><code class="descname">t2</code><a class="headerlink" href="#typ test/src/ocaml/Modules.MT:Signature.t2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Floating doc with many leading spaces (which should be removed),
+several lines:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="ow">and</span> <span class="n">a</span> <span class="n">quoted</span><span class="p">,</span> <span class="n">indented</span> <span class="n">part</span> <span class="p">(</span><span class="n">that</span> <span class="n">should</span> <span class="n">keep</span> <span class="n">its</span> <span class="n">indentation</span><span class="p">)</span>
+<span class="k">with</span> <span class="n">another</span> <span class="n">line</span> <span class="k">with</span> <span class="n">trailing</span> <span class="n">spaces</span> <span class="p">(</span><span class="n">that</span> <span class="n">should</span> <span class="n">be</span> <span class="n">removed</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>And a conclusion with many trailing spaces (which should be removed as well).</p>
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.MT:AliasOfSignature">
+<em class="property">module </em><code class="descname">AliasOfSignature</code><em class="property"> = Signature</em><a class="headerlink" href="#mod test/src/ocaml/Modules.MT:AliasOfSignature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for AliasOfSignature</p>
+<p>Doc’ for AliasOfSignature</p>
+</dd><dt>
+</dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.MT:SimpleFunctor">
+<em class="property">module </em><code class="descname">SimpleFunctor</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.MT:SimpleFunctor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for SimpleFunctor</p>
+<p>Doc’ for SimpleFunctor</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">N</code><em class="property"> : sig</em></dt>
+<dd><p>Floating Doc in sig of SimpleFunctor.N (because I’ve not found a way to attach doc to a functor parameter)</p>
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.MT:SimpleFunctor.N$n">
+<em class="property">val </em><code class="descname">n</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.MT:SimpleFunctor.N$n" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for SimpleFunctor.N.n</p>
+<p>Doc’ for SimpleFunctor.N.n</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.MT:SimpleFunctor.t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/Modules.MT:SimpleFunctor.t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for SimpleFunctor.t</p>
+<p>Doc’ for SimpleFunctor.t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.MT:MultiFunctor">
+<em class="property">module </em><code class="descname">MultiFunctor</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.MT:MultiFunctor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for MultiFunctor</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/Modules.MT:MultiFunctor.A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/Modules.MT:MultiFunctor.A$a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for MultiFunctor.A.a</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">B</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/Modules.MT:MultiFunctor.B$b">
+<em class="property">type </em><code class="descname">b</code><a class="headerlink" href="#typ test/src/ocaml/Modules.MT:MultiFunctor.B$b" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for MultiFunctor.B.b</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">C</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/Modules.MT:MultiFunctor.C$c">
+<em class="property">type </em><code class="descname">c</code><a class="headerlink" href="#typ test/src/ocaml/Modules.MT:MultiFunctor.C$c" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for MultiFunctor.C.c</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.MT:MultiFunctor.t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/Modules.MT:MultiFunctor.t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.MT:FunctorOfFunctor">
+<em class="property">module </em><code class="descname">FunctorOfFunctor</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.MT:FunctorOfFunctor" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">F</code><em class="property"> : sig</em></dt>
+<dd><dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/Modules.MT:FunctorOfFunctor.F$A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/Modules.MT:FunctorOfFunctor.F$A$a" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.MT:FunctorOfFunctor.F$f">
+<em class="property">type </em><code class="descname">f</code><a class="headerlink" href="#typ test/src/ocaml/Modules.MT:FunctorOfFunctor.F$f" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.MT:FunctorOfFunctor.ff">
+<em class="property">type </em><code class="descname">ff</code><a class="headerlink" href="#typ test/src/ocaml/Modules.MT:FunctorOfFunctor.ff" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.MT:AliasOfFunctorOfFunctor">
+<em class="property">module </em><code class="descname">AliasOfFunctorOfFunctor</code><em class="property"> = FunctorOfFunctor</em><a class="headerlink" href="#mod test/src/ocaml/Modules.MT:AliasOfFunctorOfFunctor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for AliasOfFunctorOfFunctor</p>
+<p>Doc’ for AliasOfFunctorOfFunctor</p>
+</dd><dt>
+</dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.MT:ModuleTypeOfAliasOfFunctor">
+<em class="property">module </em><code class="descname">ModuleTypeOfAliasOfFunctor</code><em class="property"> : module type of AliasOfFunctorOfFunctor = sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.MT:ModuleTypeOfAliasOfFunctor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleTypeOfAliasOfFunctor</p>
+<p>Doc’ for ModuleTypeOfAliasOfFunctor</p>
+<p>Doc for AliasOfFunctorOfFunctor</p>
+<p>Doc’ for AliasOfFunctorOfFunctor</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">F</code><em class="property"> : sig</em></dt>
+<dd><dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/Modules.MT:ModuleTypeOfAliasOfFunctor.F$A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/Modules.MT:ModuleTypeOfAliasOfFunctor.F$A$a" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.MT:ModuleTypeOfAliasOfFunctor.F$f">
+<em class="property">type </em><code class="descname">f</code><a class="headerlink" href="#typ test/src/ocaml/Modules.MT:ModuleTypeOfAliasOfFunctor.F$f" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.MT:ModuleTypeOfAliasOfFunctor.ff">
+<em class="property">type </em><code class="descname">ff</code><em class="property"> = FunctorOfFunctor(F).ff</em><a class="headerlink" href="#typ test/src/ocaml/Modules.MT:ModuleTypeOfAliasOfFunctor.ff" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.MT:Identifier">
+<em class="property">module </em><code class="descname">Identifier</code><em class="property"> : ModuleType = sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.MT:Identifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for Identifier</p>
+<p>Doc’ for Identifier</p>
+<p>Doc for ModuleType</p>
+<p>Doc’ for ModuleType</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.MT:Identifier.t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/Modules.MT:Identifier.t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleType.t</p>
+<p>Doc’ for ModuleType.t</p>
+</dd></dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.MT:Identifier.v">
+<em class="property">val </em><code class="descname">v</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.MT:Identifier.v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v</p>
+<p>Doc’ for v</p>
+</dd></dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.MT:Identifier.M">
+<em class="property">module </em><code class="descname">M</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.MT:Identifier.M" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for M</p>
+<p>Doc’ for M</p>
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.MT:Identifier.M.w">
+<em class="property">val </em><code class="descname">w</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.MT:Identifier.M.w" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/Modules.MT:Identifier.MT">
+<em class="property">module type </em><code class="descname">MT</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/Modules.MT:Identifier.MT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for MT</p>
+<p>Doc’ for MT</p>
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.MT:Identifier.MT:x">
+<em class="property">val </em><code class="descname">x</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.MT:Identifier.MT:x" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.MT:WithType">
+<em class="property">module </em><code class="descname">WithType</code><em class="property"> : ModuleType with type t = float = sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.MT:WithType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for WithType</p>
+<p>Doc’ for WithType</p>
+<p>Doc for ModuleType</p>
+<p>Doc’ for ModuleType</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.MT:WithType.t">
+<em class="property">type </em><code class="descname">t</code><em class="property"> = float</em><a class="headerlink" href="#typ test/src/ocaml/Modules.MT:WithType.t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.MT:WithType.v">
+<em class="property">val </em><code class="descname">v</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.MT:WithType.v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v</p>
+<p>Doc’ for v</p>
+</dd></dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.MT:WithType.M">
+<em class="property">module </em><code class="descname">M</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.MT:WithType.M" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for M</p>
+<p>Doc’ for M</p>
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.MT:WithType.M.w">
+<em class="property">val </em><code class="descname">w</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.MT:WithType.M.w" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/Modules.MT:WithType.MT">
+<em class="property">module type </em><code class="descname">MT</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/Modules.MT:WithType.MT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for MT</p>
+<p>Doc’ for MT</p>
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.MT:WithType.MT:x">
+<em class="property">val </em><code class="descname">x</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.MT:WithType.MT:x" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.MT:IndirectIdentifier">
+<em class="property">module </em><code class="descname">IndirectIdentifier</code><em class="property"> : ModuleTypeAlias = sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.MT:IndirectIdentifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for IndirectIdentifier</p>
+<p>Doc’ for IndirectIdentifier</p>
+<p>Doc for ModuleTypeAlias</p>
+<p>Doc’ for ModuleTypeAlias</p>
+<p>Doc for ModuleType</p>
+<p>Doc’ for ModuleType</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.MT:IndirectIdentifier.t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/Modules.MT:IndirectIdentifier.t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleType.t</p>
+<p>Doc’ for ModuleType.t</p>
+</dd></dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.MT:IndirectIdentifier.v">
+<em class="property">val </em><code class="descname">v</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.MT:IndirectIdentifier.v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v</p>
+<p>Doc’ for v</p>
+</dd></dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.MT:IndirectIdentifier.M">
+<em class="property">module </em><code class="descname">M</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.MT:IndirectIdentifier.M" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for M</p>
+<p>Doc’ for M</p>
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.MT:IndirectIdentifier.M.w">
+<em class="property">val </em><code class="descname">w</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.MT:IndirectIdentifier.M.w" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/Modules.MT:IndirectIdentifier.MT">
+<em class="property">module type </em><code class="descname">MT</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/Modules.MT:IndirectIdentifier.MT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for MT</p>
+<p>Doc’ for MT</p>
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.MT:IndirectIdentifier.MT:x">
+<em class="property">val </em><code class="descname">x</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.MT:IndirectIdentifier.MT:x" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.MT:FunctorWithIdentifierParam">
+<em class="property">module </em><code class="descname">FunctorWithIdentifierParam</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.MT:FunctorWithIdentifierParam" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : ModuleTypeAlias = sig</em></dt>
+<dd><p>Doc for ModuleTypeAlias</p>
+<p>Doc’ for ModuleTypeAlias</p>
+<p>Doc for ModuleType</p>
+<p>Doc’ for ModuleType</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.MT:FunctorWithIdentifierParam.A$t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/Modules.MT:FunctorWithIdentifierParam.A$t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleType.t</p>
+<p>Doc’ for ModuleType.t</p>
+</dd></dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.MT:FunctorWithIdentifierParam.A$v">
+<em class="property">val </em><code class="descname">v</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.MT:FunctorWithIdentifierParam.A$v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v</p>
+<p>Doc’ for v</p>
+</dd></dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.MT:FunctorWithIdentifierParam.A$M">
+<em class="property">module </em><code class="descname">M</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.MT:FunctorWithIdentifierParam.A$M" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for M</p>
+<p>Doc’ for M</p>
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.MT:FunctorWithIdentifierParam.A$M.w">
+<em class="property">val </em><code class="descname">w</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.MT:FunctorWithIdentifierParam.A$M.w" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/Modules.MT:FunctorWithIdentifierParam.A$MT">
+<em class="property">module type </em><code class="descname">MT</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/Modules.MT:FunctorWithIdentifierParam.A$MT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for MT</p>
+<p>Doc’ for MT</p>
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.MT:FunctorWithIdentifierParam.A$MT:x">
+<em class="property">val </em><code class="descname">x</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.MT:FunctorWithIdentifierParam.A$MT:x" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.MT:FunctorAsIdentifier">
+<em class="property">module </em><code class="descname">FunctorAsIdentifier</code><em class="property"> : FunctorType = sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.MT:FunctorAsIdentifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for FunctorAsIdentifier</p>
+<p>Doc’ for FunctorAsIdentifier</p>
+<p>Doc for FunctorType</p>
+<p>Doc’ for FunctorType</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/Modules.MT:FunctorAsIdentifier.A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/Modules.MT:FunctorAsIdentifier.A$a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for a</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.MT:FunctorAsIdentifier.t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/Modules.MT:FunctorAsIdentifier.t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.MT:Recursive1">
+<em class="property">module </em><code class="descname">Recursive1</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.MT:Recursive1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for Recursive1</p>
+<p>Doc’ for Recursive1</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.MT:Recursive1.t">
+<em class="property">type </em><code class="descname">t</code><em class="property"> = A1 | B1 of Recursive2.t</em><a class="headerlink" href="#typ test/src/ocaml/Modules.MT:Recursive1.t" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Constructor A1:</th><td class="field-body">Doc for A1</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Constructor B1:</th><td class="field-body">Doc for B1</td>
+</tr>
+</tbody>
+</table>
+<p>Doc for t</p>
+<p>Doc’ for t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.MT:Recursive2">
+<em class="property">module </em><code class="descname">Recursive2</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.MT:Recursive2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for Recursive2</p>
+<p>Doc’ for Recursive2</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.MT:Recursive2.t">
+<em class="property">type </em><code class="descname">t</code><em class="property"> = A2 | B2 of Recursive1.t</em><a class="headerlink" href="#typ test/src/ocaml/Modules.MT:Recursive2.t" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Constructor A2:</th><td class="field-body">Doc for A2</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Constructor B2:</th><td class="field-body">Doc for B2</td>
+</tr>
+</tbody>
+</table>
+<p>Doc for t</p>
+<p>Doc’ for t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.MT:AbstractAsIdentifier">
+<em class="property">module </em><code class="descname">AbstractAsIdentifier</code><em class="property"> : Abstract = sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.MT:AbstractAsIdentifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for AbstractAsIdentifier</p>
+<p>Doc’ for AbstractAsIdentifier</p>
+<p>Doc for Abstract</p>
+<p>Doc’ for Abstract</p>
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="incl">
+<dt id="incl test/src/ocaml/Modules.0">
+<em class="property">include </em><code class="descname">MT</code><em class="property"> = sig</em><a class="headerlink" href="#incl test/src/ocaml/Modules.0" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="module">
+<dt id="mod test/src/ocaml/Modules.Signature">
+<em class="property">module </em><code class="descname">Signature</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.Signature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for Signature</p>
+<p>Doc’ for Signature</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.Signature.t1">
+<em class="property">type </em><code class="descname">t1</code><a class="headerlink" href="#typ test/src/ocaml/Modules.Signature.t1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.Signature.t2">
+<em class="property">type </em><code class="descname">t2</code><a class="headerlink" href="#typ test/src/ocaml/Modules.Signature.t2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.AliasOfSignature">
+<em class="property">module </em><code class="descname">AliasOfSignature</code><em class="property"> = Signature</em><a class="headerlink" href="#mod test/src/ocaml/Modules.AliasOfSignature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for AliasOfSignature</p>
+<p>Doc’ for AliasOfSignature</p>
+</dd><dt>
+</dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.Hidden">
+<em class="property">module </em><code class="descname">Hidden</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.Hidden" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for Hidden</p>
+<p>Doc for Hidden</p>
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.SimpleFunctor">
+<em class="property">module </em><code class="descname">SimpleFunctor</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.SimpleFunctor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for SimpleFunctor</p>
+<p>Doc’ for SimpleFunctor</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">N</code><em class="property"> : sig</em></dt>
+<dd><dl class="val">
+<dt id="val test/src/ocaml/Modules.SimpleFunctor.N$n">
+<em class="property">val </em><code class="descname">n</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.SimpleFunctor.N$n" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for SimpleFunctor.N.n</p>
+<p>Doc’ for SimpleFunctor.N.n</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.SimpleFunctor.t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/Modules.SimpleFunctor.t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for SimpleFunctor.t</p>
+<p>Doc’ for SimpleFunctor.t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.MultiFunctor">
+<em class="property">module </em><code class="descname">MultiFunctor</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.MultiFunctor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for MultiFunctor</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/Modules.MultiFunctor.A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/Modules.MultiFunctor.A$a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for MultiFunctor.A.a</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">B</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/Modules.MultiFunctor.B$b">
+<em class="property">type </em><code class="descname">b</code><a class="headerlink" href="#typ test/src/ocaml/Modules.MultiFunctor.B$b" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for MultiFunctor.B.b</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">C</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/Modules.MultiFunctor.C$c">
+<em class="property">type </em><code class="descname">c</code><a class="headerlink" href="#typ test/src/ocaml/Modules.MultiFunctor.C$c" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for MultiFunctor.C.c</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.MultiFunctor.t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/Modules.MultiFunctor.t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.FunctorOfFunctor">
+<em class="property">module </em><code class="descname">FunctorOfFunctor</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.FunctorOfFunctor" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">F</code><em class="property"> : sig</em></dt>
+<dd><dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/Modules.FunctorOfFunctor.F$A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/Modules.FunctorOfFunctor.F$A$a" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.FunctorOfFunctor.F$f">
+<em class="property">type </em><code class="descname">f</code><a class="headerlink" href="#typ test/src/ocaml/Modules.FunctorOfFunctor.F$f" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.FunctorOfFunctor.ff">
+<em class="property">type </em><code class="descname">ff</code><a class="headerlink" href="#typ test/src/ocaml/Modules.FunctorOfFunctor.ff" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.AliasOfFunctorOfFunctor">
+<em class="property">module </em><code class="descname">AliasOfFunctorOfFunctor</code><em class="property"> = FunctorOfFunctor</em><a class="headerlink" href="#mod test/src/ocaml/Modules.AliasOfFunctorOfFunctor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for AliasOfFunctorOfFunctor</p>
+<p>Doc’ for AliasOfFunctorOfFunctor</p>
+</dd><dt>
+</dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.ModuleTypeOfAliasOfFunctor">
+<em class="property">module </em><code class="descname">ModuleTypeOfAliasOfFunctor</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.ModuleTypeOfAliasOfFunctor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleTypeOfAliasOfFunctor</p>
+<p>Doc’ for ModuleTypeOfAliasOfFunctor</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">F</code><em class="property"> : sig</em></dt>
+<dd><dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/Modules.ModuleTypeOfAliasOfFunctor.F$A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/Modules.ModuleTypeOfAliasOfFunctor.F$A$a" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.ModuleTypeOfAliasOfFunctor.F$f">
+<em class="property">type </em><code class="descname">f</code><a class="headerlink" href="#typ test/src/ocaml/Modules.ModuleTypeOfAliasOfFunctor.F$f" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.ModuleTypeOfAliasOfFunctor.ff">
+<em class="property">type </em><code class="descname">ff</code><em class="property"> = FunctorOfFunctor(F).ff</em><a class="headerlink" href="#typ test/src/ocaml/Modules.ModuleTypeOfAliasOfFunctor.ff" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/Modules.ModuleType">
+<em class="property">module type </em><code class="descname">ModuleType</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/Modules.ModuleType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleType</p>
+<p>Doc’ for ModuleType</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.ModuleType:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/Modules.ModuleType:t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleType.t</p>
+<p>Doc’ for ModuleType.t</p>
+</dd></dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.ModuleType:v">
+<em class="property">val </em><code class="descname">v</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.ModuleType:v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v</p>
+<p>Doc’ for v</p>
+</dd></dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.ModuleType:M">
+<em class="property">module </em><code class="descname">M</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.ModuleType:M" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for M</p>
+<p>Doc’ for M</p>
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.ModuleType:M.w">
+<em class="property">val </em><code class="descname">w</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.ModuleType:M.w" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/Modules.ModuleType:MT">
+<em class="property">module type </em><code class="descname">MT</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/Modules.ModuleType:MT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for MT</p>
+<p>Doc’ for MT</p>
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.ModuleType:MT:x">
+<em class="property">val </em><code class="descname">x</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.ModuleType:MT:x" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.Identifier">
+<em class="property">module </em><code class="descname">Identifier</code><em class="property"> : ModuleType = sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.Identifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for Identifier</p>
+<p>Doc’ for Identifier</p>
+<p>Doc for ModuleType</p>
+<p>Doc’ for ModuleType</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.Identifier.t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/Modules.Identifier.t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleType.t</p>
+<p>Doc’ for ModuleType.t</p>
+</dd></dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.Identifier.v">
+<em class="property">val </em><code class="descname">v</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.Identifier.v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v</p>
+<p>Doc’ for v</p>
+</dd></dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.Identifier.M">
+<em class="property">module </em><code class="descname">M</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.Identifier.M" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for M</p>
+<p>Doc’ for M</p>
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.Identifier.M.w">
+<em class="property">val </em><code class="descname">w</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.Identifier.M.w" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/Modules.Identifier.MT">
+<em class="property">module type </em><code class="descname">MT</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/Modules.Identifier.MT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for MT</p>
+<p>Doc’ for MT</p>
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.Identifier.MT:x">
+<em class="property">val </em><code class="descname">x</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.Identifier.MT:x" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.WithType">
+<em class="property">module </em><code class="descname">WithType</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.WithType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for WithType</p>
+<p>Doc’ for WithType</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.WithType.t">
+<em class="property">type </em><code class="descname">t</code><em class="property"> = float</em><a class="headerlink" href="#typ test/src/ocaml/Modules.WithType.t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.WithType.v">
+<em class="property">val </em><code class="descname">v</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.WithType.v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v</p>
+<p>Doc’ for v</p>
+</dd></dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.WithType.M">
+<em class="property">module </em><code class="descname">M</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.WithType.M" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for M</p>
+<p>Doc’ for M</p>
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.WithType.M.w">
+<em class="property">val </em><code class="descname">w</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.WithType.M.w" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/Modules.WithType.MT">
+<em class="property">module type </em><code class="descname">MT</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/Modules.WithType.MT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for MT</p>
+<p>Doc’ for MT</p>
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.WithType.MT:x">
+<em class="property">val </em><code class="descname">x</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.WithType.MT:x" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/Modules.ModuleTypeAlias">
+<em class="property">module type </em><code class="descname">ModuleTypeAlias</code><em class="property"> = ModuleType = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/Modules.ModuleTypeAlias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleTypeAlias</p>
+<p>Doc’ for ModuleTypeAlias</p>
+<p>Doc for ModuleType</p>
+<p>Doc’ for ModuleType</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.ModuleTypeAlias:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/Modules.ModuleTypeAlias:t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleType.t</p>
+<p>Doc’ for ModuleType.t</p>
+</dd></dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.ModuleTypeAlias:v">
+<em class="property">val </em><code class="descname">v</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.ModuleTypeAlias:v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v</p>
+<p>Doc’ for v</p>
+</dd></dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.ModuleTypeAlias:M">
+<em class="property">module </em><code class="descname">M</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.ModuleTypeAlias:M" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for M</p>
+<p>Doc’ for M</p>
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.ModuleTypeAlias:M.w">
+<em class="property">val </em><code class="descname">w</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.ModuleTypeAlias:M.w" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/Modules.ModuleTypeAlias:MT">
+<em class="property">module type </em><code class="descname">MT</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/Modules.ModuleTypeAlias:MT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for MT</p>
+<p>Doc’ for MT</p>
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.ModuleTypeAlias:MT:x">
+<em class="property">val </em><code class="descname">x</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.ModuleTypeAlias:MT:x" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.IndirectIdentifier">
+<em class="property">module </em><code class="descname">IndirectIdentifier</code><em class="property"> : ModuleTypeAlias = sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.IndirectIdentifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for IndirectIdentifier</p>
+<p>Doc’ for IndirectIdentifier</p>
+<p>Doc for ModuleTypeAlias</p>
+<p>Doc’ for ModuleTypeAlias</p>
+<p>Doc for ModuleType</p>
+<p>Doc’ for ModuleType</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.IndirectIdentifier.t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/Modules.IndirectIdentifier.t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleType.t</p>
+<p>Doc’ for ModuleType.t</p>
+</dd></dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.IndirectIdentifier.v">
+<em class="property">val </em><code class="descname">v</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.IndirectIdentifier.v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v</p>
+<p>Doc’ for v</p>
+</dd></dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.IndirectIdentifier.M">
+<em class="property">module </em><code class="descname">M</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.IndirectIdentifier.M" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for M</p>
+<p>Doc’ for M</p>
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.IndirectIdentifier.M.w">
+<em class="property">val </em><code class="descname">w</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.IndirectIdentifier.M.w" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/Modules.IndirectIdentifier.MT">
+<em class="property">module type </em><code class="descname">MT</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/Modules.IndirectIdentifier.MT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for MT</p>
+<p>Doc’ for MT</p>
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.IndirectIdentifier.MT:x">
+<em class="property">val </em><code class="descname">x</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.IndirectIdentifier.MT:x" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.FunctorWithIdentifierParam">
+<em class="property">module </em><code class="descname">FunctorWithIdentifierParam</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.FunctorWithIdentifierParam" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : ModuleTypeAlias = sig</em></dt>
+<dd><p>Doc for ModuleTypeAlias</p>
+<p>Doc’ for ModuleTypeAlias</p>
+<p>Doc for ModuleType</p>
+<p>Doc’ for ModuleType</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.FunctorWithIdentifierParam.A$t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/Modules.FunctorWithIdentifierParam.A$t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for ModuleType.t</p>
+<p>Doc’ for ModuleType.t</p>
+</dd></dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.FunctorWithIdentifierParam.A$v">
+<em class="property">val </em><code class="descname">v</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.FunctorWithIdentifierParam.A$v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v</p>
+<p>Doc’ for v</p>
+</dd></dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.FunctorWithIdentifierParam.A$M">
+<em class="property">module </em><code class="descname">M</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.FunctorWithIdentifierParam.A$M" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for M</p>
+<p>Doc’ for M</p>
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.FunctorWithIdentifierParam.A$M.w">
+<em class="property">val </em><code class="descname">w</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.FunctorWithIdentifierParam.A$M.w" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/Modules.FunctorWithIdentifierParam.A$MT">
+<em class="property">module type </em><code class="descname">MT</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/Modules.FunctorWithIdentifierParam.A$MT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for MT</p>
+<p>Doc’ for MT</p>
+<dl class="val">
+<dt id="val test/src/ocaml/Modules.FunctorWithIdentifierParam.A$MT:x">
+<em class="property">val </em><code class="descname">x</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Modules.FunctorWithIdentifierParam.A$MT:x" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/Modules.FunctorType">
+<em class="property">module type </em><code class="descname">FunctorType</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/Modules.FunctorType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for FunctorType</p>
+<p>Doc’ for FunctorType</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/Modules.FunctorType:A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/Modules.FunctorType:A$a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for a</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.FunctorType:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/Modules.FunctorType:t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.FunctorAsIdentifier">
+<em class="property">module </em><code class="descname">FunctorAsIdentifier</code><em class="property"> : FunctorType = sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.FunctorAsIdentifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for FunctorAsIdentifier</p>
+<p>Doc’ for FunctorAsIdentifier</p>
+<p>Doc for FunctorType</p>
+<p>Doc’ for FunctorType</p>
+<dl class="functor_parameter">
+<dt>
+<em class="property">functor parameter </em><code class="descname">A</code><em class="property"> : sig</em></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/Modules.FunctorAsIdentifier.A$a">
+<em class="property">type </em><code class="descname">a</code><a class="headerlink" href="#typ test/src/ocaml/Modules.FunctorAsIdentifier.A$a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for a</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.FunctorAsIdentifier.t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ test/src/ocaml/Modules.FunctorAsIdentifier.t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.Recursive1">
+<em class="property">module </em><code class="descname">Recursive1</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.Recursive1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for Recursive1</p>
+<p>Doc’ for Recursive1</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.Recursive1.t">
+<em class="property">type </em><code class="descname">t</code><em class="property"> = A1 | B1 of Recursive2.t</em><a class="headerlink" href="#typ test/src/ocaml/Modules.Recursive1.t" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Constructor A1:</th><td class="field-body">Doc for A1</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Constructor B1:</th><td class="field-body">Doc for B1</td>
+</tr>
+</tbody>
+</table>
+<p>Doc for t</p>
+<p>Doc’ for t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.Recursive2">
+<em class="property">module </em><code class="descname">Recursive2</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.Recursive2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for Recursive2</p>
+<p>Doc’ for Recursive2</p>
+<dl class="type">
+<dt id="typ test/src/ocaml/Modules.Recursive2.t">
+<em class="property">type </em><code class="descname">t</code><em class="property"> = A2 | B2 of Recursive1.t</em><a class="headerlink" href="#typ test/src/ocaml/Modules.Recursive2.t" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Constructor A2:</th><td class="field-body">Doc for A2</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Constructor B2:</th><td class="field-body">Doc for B2</td>
+</tr>
+</tbody>
+</table>
+<p>Doc for t</p>
+<p>Doc’ for t</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module_type">
+<dt id="modtyp test/src/ocaml/Modules.Abstract">
+<em class="property">module type </em><code class="descname">Abstract</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/Modules.Abstract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for Abstract</p>
+<p>Doc’ for Abstract</p>
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Modules.AbstractAsIdentifier">
+<em class="property">module </em><code class="descname">AbstractAsIdentifier</code><em class="property"> : Abstract = sig</em><a class="headerlink" href="#mod test/src/ocaml/Modules.AbstractAsIdentifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for AbstractAsIdentifier</p>
+<p>Doc’ for AbstractAsIdentifier</p>
+<p>Doc for Abstract</p>
+<p>Doc’ for Abstract</p>
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<p>A reference to a module: <a class="reference internal" href="#mod test/src/ocaml/Modules.Signature"><code class="xref ocaml ocaml-mod docutils literal"><span class="pre">test/src/ocaml/Modules.Signature</span></code></a>.</p>
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Types">
+<em class="property">module </em><code class="descname">test/src/ocaml/Types</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Types" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="module_type">
+<dt id="modtyp test/src/ocaml/Types.MT">
+<em class="property">module type </em><code class="descname">MT</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/Types.MT" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/Types.MT:manifest">
+<em class="property">type </em><code class="descname">manifest</code><em class="property"> = int</em><a class="headerlink" href="#typ test/src/ocaml/Types.MT:manifest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for manifest</p>
+<p>Doc’ for manifest</p>
+</dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Types.MT:parameter">
+<em class="property">type 'a </em><code class="descname">parameter</code><a class="headerlink" href="#typ test/src/ocaml/Types.MT:parameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for parameter</p>
+<p>Doc’ for parameter</p>
+</dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Types.MT:parameters">
+<em class="property">type ('a, 'b) </em><code class="descname">parameters</code><a class="headerlink" href="#typ test/src/ocaml/Types.MT:parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for parameters</p>
+<p>Doc’ for parameters</p>
+</dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Types.MT:variances">
+<em class="property">type (-'a, +'b) </em><code class="descname">variances</code><a class="headerlink" href="#typ test/src/ocaml/Types.MT:variances" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for variances</p>
+<p>Doc’ for variances</p>
+</dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Types.MT:record">
+<em class="property">type </em><code class="descname">record</code><em class="property"> = {a: int; mutable b: float}</em><a class="headerlink" href="#typ test/src/ocaml/Types.MT:record" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Label a:</th><td class="field-body">Doc for record.a</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Label b:</th><td class="field-body">Doc for record.b</td>
+</tr>
+</tbody>
+</table>
+<p>Doc for record</p>
+<p>Doc’ for record</p>
+</dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Types.MT:variant">
+<em class="property">type </em><code class="descname">variant</code><em class="property"> = None | Single of int | Several of int * float | Tuple of (int * float) | Record of {a: int; mutable b: float}</em><a class="headerlink" href="#typ test/src/ocaml/Types.MT:variant" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Constructor None:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Doc for None</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Constructor Single:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Doc for Single</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Constructor Several:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Doc for Several</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Constructor Tuple:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Doc for Tuple</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Constructor Record:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Doc for Record</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Label a:</th><td class="field-body">Doc for Record.a</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Label b:</th><td class="field-body">Doc for Record.b</td>
+</tr>
+</tbody>
+</table>
+<p>Doc for variant</p>
+<p>Doc’ for variant</p>
+</dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Types.MT:recursive1">
+<em class="property">type </em><code class="descname">recursive1</code><em class="property"> = A1 | B1 of recursive2</em><a class="headerlink" href="#typ test/src/ocaml/Types.MT:recursive1" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Constructor A1:</th><td class="field-body">Doc for A1</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Constructor B1:</th><td class="field-body">Doc for B1</td>
+</tr>
+</tbody>
+</table>
+<p>Doc for recursive1</p>
+</dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Types.MT:recursive2">
+<em class="property">type </em><code class="descname">recursive2</code><em class="property"> = A2 | B2 of recursive1</em><a class="headerlink" href="#typ test/src/ocaml/Types.MT:recursive2" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Constructor A2:</th><td class="field-body">Doc for A2</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Constructor B2:</th><td class="field-body">Doc for B2</td>
+</tr>
+</tbody>
+</table>
+<p>Doc for recursive2</p>
+</dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Types.MT:open_">
+<em class="property">type </em><code class="descname">open_</code><em class="property"> = ..</em><a class="headerlink" href="#typ test/src/ocaml/Types.MT:open_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for open_</p>
+<p>Doc’ for open_</p>
+</dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Types.MT:private_int">
+<em class="property">type </em><code class="descname">private_int</code><em class="property"> = private int</em><a class="headerlink" href="#typ test/src/ocaml/Types.MT:private_int" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Types.MT:private_variant">
+<em class="property">type </em><code class="descname">private_variant</code><em class="property"> = private Private</em><a class="headerlink" href="#typ test/src/ocaml/Types.MT:private_variant" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Constructor Private:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Types.MT:private_record">
+<em class="property">type </em><code class="descname">private_record</code><em class="property"> = private {c: int}</em><a class="headerlink" href="#typ test/src/ocaml/Types.MT:private_record" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Label c:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="incl">
+<dt id="incl test/src/ocaml/Types.0">
+<em class="property">include </em><code class="descname">MT</code><em class="property"> = sig</em><a class="headerlink" href="#incl test/src/ocaml/Types.0" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="type">
+<dt id="typ test/src/ocaml/Types.manifest">
+<em class="property">type </em><code class="descname">manifest</code><em class="property"> = int</em><a class="headerlink" href="#typ test/src/ocaml/Types.manifest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for manifest</p>
+<p>Doc’ for manifest</p>
+</dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Types.hidden">
+<em class="property">type </em><code class="descname">hidden</code><a class="headerlink" href="#typ test/src/ocaml/Types.hidden" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for hidden</p>
+<p>Doc’ for hidden</p>
+</dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Types.parameter">
+<em class="property">type 'a </em><code class="descname">parameter</code><a class="headerlink" href="#typ test/src/ocaml/Types.parameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for parameter</p>
+<p>Doc’ for parameter</p>
+</dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Types.parameters">
+<em class="property">type ('a, 'b) </em><code class="descname">parameters</code><a class="headerlink" href="#typ test/src/ocaml/Types.parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for parameters</p>
+<p>Doc’ for parameters</p>
+</dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Types.variances">
+<em class="property">type (-'a, +'b) </em><code class="descname">variances</code><a class="headerlink" href="#typ test/src/ocaml/Types.variances" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for variances</p>
+<p>Doc’ for variances</p>
+</dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Types.record">
+<em class="property">type </em><code class="descname">record</code><em class="property"> = {a: int; mutable b: float}</em><a class="headerlink" href="#typ test/src/ocaml/Types.record" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Label a:</th><td class="field-body">Doc for record.a</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Label b:</th><td class="field-body">Doc for record.b</td>
+</tr>
+</tbody>
+</table>
+<p>Doc for record</p>
+<p>Doc’ for record</p>
+</dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Types.variant">
+<em class="property">type </em><code class="descname">variant</code><em class="property"> = None | Single of int | Several of int * float | Tuple of (int * float) | Record of {a: int; mutable b: float}</em><a class="headerlink" href="#typ test/src/ocaml/Types.variant" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Constructor None:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Doc for None</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Constructor Single:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Doc for Single</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Constructor Several:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Doc for Several</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Constructor Tuple:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Doc for Tuple</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Constructor Record:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Doc for Record</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Label a:</th><td class="field-body">Doc for Record.a</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Label b:</th><td class="field-body">Doc for Record.b</td>
+</tr>
+</tbody>
+</table>
+<p>Doc for variant</p>
+<p>Doc’ for variant</p>
+</dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Types.recursive1">
+<em class="property">type </em><code class="descname">recursive1</code><em class="property"> = A1 | B1 of recursive2</em><a class="headerlink" href="#typ test/src/ocaml/Types.recursive1" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Constructor A1:</th><td class="field-body">Doc for A1</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Constructor B1:</th><td class="field-body">Doc for B1</td>
+</tr>
+</tbody>
+</table>
+<p>Doc for recursive1</p>
+</dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Types.recursive2">
+<em class="property">type </em><code class="descname">recursive2</code><em class="property"> = A2 | B2 of recursive1</em><a class="headerlink" href="#typ test/src/ocaml/Types.recursive2" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Constructor A2:</th><td class="field-body">Doc for A2</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Constructor B2:</th><td class="field-body">Doc for B2</td>
+</tr>
+</tbody>
+</table>
+<p>Doc for recursive2</p>
+</dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Types.open_">
+<em class="property">type </em><code class="descname">open_</code><em class="property"> = ..</em><a class="headerlink" href="#typ test/src/ocaml/Types.open_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for open_</p>
+<p>Doc’ for open_</p>
+</dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Types.private_int">
+<em class="property">type </em><code class="descname">private_int</code><em class="property"> = private int</em><a class="headerlink" href="#typ test/src/ocaml/Types.private_int" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Types.private_variant">
+<em class="property">type </em><code class="descname">private_variant</code><em class="property"> = private Private</em><a class="headerlink" href="#typ test/src/ocaml/Types.private_variant" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Constructor Private:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="type">
+<dt id="typ test/src/ocaml/Types.private_record">
+<em class="property">type </em><code class="descname">private_record</code><em class="property"> = private {c: int}</em><a class="headerlink" href="#typ test/src/ocaml/Types.private_record" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Label c:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<p>A reference to a type: <a class="reference internal" href="#typ test/src/ocaml/Types.parameters"><code class="xref ocaml ocaml-typ docutils literal"><span class="pre">test/src/ocaml/Types.parameters</span></code></a>.</p>
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod test/src/ocaml/Values">
+<em class="property">module </em><code class="descname">test/src/ocaml/Values</code><em class="property"> : sig</em><a class="headerlink" href="#mod test/src/ocaml/Values" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="module_type">
+<dt id="modtyp test/src/ocaml/Values.MT">
+<em class="property">module type </em><code class="descname">MT</code><em class="property"> = sig</em><a class="headerlink" href="#modtyp test/src/ocaml/Values.MT" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="val">
+<dt id="val test/src/ocaml/Values.MT:v">
+<em class="property">val </em><code class="descname">v</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Values.MT:v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v</p>
+<p>Doc’ for v</p>
+</dd></dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/Values.MT:(+)">
+<em class="property">val </em><code class="descname">(+)</code><em class="property">: unit</em><a class="headerlink" href="#val test/src/ocaml/Values.MT:(+)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for (+): there should be parentheses</p>
+<p>Doc’ for (+)</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="incl">
+<dt id="incl test/src/ocaml/Values.0">
+<em class="property">include </em><code class="descname">MT</code><em class="property"> = sig</em><a class="headerlink" href="#incl test/src/ocaml/Values.0" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="val">
+<dt id="val test/src/ocaml/Values.v">
+<em class="property">val </em><code class="descname">v</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Values.v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for v</p>
+<p>Doc’ for v</p>
+</dd></dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/Values.hidden">
+<em class="property">val </em><code class="descname">hidden</code><em class="property">: int</em><a class="headerlink" href="#val test/src/ocaml/Values.hidden" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for hidden</p>
+<p>Doc’ for hidden</p>
+</dd></dl>
+
+<dl class="val">
+<dt id="val test/src/ocaml/Values.(+)">
+<em class="property">val </em><code class="descname">(+)</code><em class="property">: unit</em><a class="headerlink" href="#val test/src/ocaml/Values.(+)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc for (+): there should be parentheses</p>
+<p>Doc’ for (+)</p>
+</dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<p>A reference to a value: <a class="reference internal" href="#val test/src/ocaml/Values.v"><code class="xref ocaml ocaml-val docutils literal"><span class="pre">test/src/ocaml/Values.v</span></code></a>.</p>
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
 </div>
 
 
