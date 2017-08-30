@@ -179,3 +179,9 @@ class ModuleDocumenter(sphinx.ext.autodoc.Documenter):
         generator = Generator(contents)
         for line in generator():
             self.add_line(line, "a")  # @todo Set file and line number (for error messages)
+
+# @todo Documenters for elements found recursively inside modules
+# (same path syntax as xref roles in the domain, using '.', ':' and '$')
+
+# @todo Investigate what sphinx-apidoc does
+# If its --separate option actually generates a file per submodule, recursively, then mimic this behavior

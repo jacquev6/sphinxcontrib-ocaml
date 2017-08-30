@@ -8,5 +8,3 @@ Test project for Sphinx OCaml
     all_references
     indices
     autodoc
-
-.. @todo Investigate what sphinx-apidoc does
