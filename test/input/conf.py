@@ -4,6 +4,7 @@
 
 import os.path
 import sys
+import subprocess
 
 
 project = "Test project for sphinx-ocaml"
@@ -24,3 +25,4 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".
 extensions.append("ocaml")
 ocaml_autoocamldoc_executable = "autoocamldoc/_build/autoocamldoc.byte"
 ocaml_source_directories = ["test/src/ocaml"]
+ocaml_findlib_packages = ["General"]

@@ -3263,6 +3263,138 @@ several lines:</p>
 <em class="property">end</em></dt>
 </dl>
 
+<dl class="module">
+<dt id="mod DependOnStdlib">
+<em class="property">module </em><code class="descname">DependOnStdlib</code><em class="property"> : sig</em><a class="headerlink" href="#mod DependOnStdlib" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="module_type">
+<dt id="modtyp DependOnStdlib.T">
+<em class="property">module type </em><code class="descname">T</code><em class="property"> = Set.OrderedType = sig</em><a class="headerlink" href="#modtyp DependOnStdlib.T" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="type">
+<dt id="typ DependOnStdlib.T:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ DependOnStdlib.T:t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="val">
+<dt id="val DependOnStdlib.T:compare">
+<em class="property">val </em><code class="descname">compare</code><em class="property">: t -&gt; t -&gt; int</em><a class="headerlink" href="#val DependOnStdlib.T:compare" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod DependOnNum">
+<em class="property">module </em><code class="descname">DependOnNum</code><em class="property"> : sig</em><a class="headerlink" href="#mod DependOnNum" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="type">
+<dt id="typ DependOnNum.t">
+<em class="property">type </em><code class="descname">t</code><em class="property"> = Num.num</em><a class="headerlink" href="#typ DependOnNum.t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+<dl class="module">
+<dt id="mod DependOnFindLibPackage">
+<em class="property">module </em><code class="descname">DependOnFindLibPackage</code><em class="property"> : sig</em><a class="headerlink" href="#mod DependOnFindLibPackage" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="module_type">
+<dt id="modtyp DependOnFindLibPackage.T">
+<em class="property">module type </em><code class="descname">T</code><em class="property"> = General.Traits.Comparable.S0 = sig</em><a class="headerlink" href="#modtyp DependOnFindLibPackage.T" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="type">
+<dt id="typ DependOnFindLibPackage.T:t">
+<em class="property">type </em><code class="descname">t</code><a class="headerlink" href="#typ DependOnFindLibPackage.T:t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="val">
+<dt id="val DependOnFindLibPackage.T:compare">
+<em class="property">val </em><code class="descname">compare</code><em class="property">: t -&gt; t -&gt; Foundations.Compare.t</em><a class="headerlink" href="#val DependOnFindLibPackage.T:compare" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="val">
+<dt id="val DependOnFindLibPackage.T:less_than">
+<em class="property">val </em><code class="descname">less_than</code><em class="property">: t -&gt; t -&gt; bool</em><a class="headerlink" href="#val DependOnFindLibPackage.T:less_than" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="val">
+<dt id="val DependOnFindLibPackage.T:less_or_equal">
+<em class="property">val </em><code class="descname">less_or_equal</code><em class="property">: t -&gt; t -&gt; bool</em><a class="headerlink" href="#val DependOnFindLibPackage.T:less_or_equal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="val">
+<dt id="val DependOnFindLibPackage.T:greater_than">
+<em class="property">val </em><code class="descname">greater_than</code><em class="property">: t -&gt; t -&gt; bool</em><a class="headerlink" href="#val DependOnFindLibPackage.T:greater_than" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="val">
+<dt id="val DependOnFindLibPackage.T:greater_or_equal">
+<em class="property">val </em><code class="descname">greater_or_equal</code><em class="property">: t -&gt; t -&gt; bool</em><a class="headerlink" href="#val DependOnFindLibPackage.T:greater_or_equal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="val">
+<dt id="val DependOnFindLibPackage.T:between">
+<em class="property">val </em><code class="descname">between</code><em class="property">: t -&gt; low:t -&gt; high:t -&gt; bool</em><a class="headerlink" href="#val DependOnFindLibPackage.T:between" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="val">
+<dt id="val DependOnFindLibPackage.T:between_or_equal">
+<em class="property">val </em><code class="descname">between_or_equal</code><em class="property">: t -&gt; low:t -&gt; high:t -&gt; bool</em><a class="headerlink" href="#val DependOnFindLibPackage.T:between_or_equal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="val">
+<dt id="val DependOnFindLibPackage.T:min">
+<em class="property">val </em><code class="descname">min</code><em class="property">: t -&gt; t -&gt; t</em><a class="headerlink" href="#val DependOnFindLibPackage.T:min" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="val">
+<dt id="val DependOnFindLibPackage.T:max">
+<em class="property">val </em><code class="descname">max</code><em class="property">: t -&gt; t -&gt; t</em><a class="headerlink" href="#val DependOnFindLibPackage.T:max" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="val">
+<dt id="val DependOnFindLibPackage.T:min_max">
+<em class="property">val </em><code class="descname">min_max</code><em class="property">: t -&gt; t -&gt; t * t</em><a class="headerlink" href="#val DependOnFindLibPackage.T:min_max" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="module">
+<dt id="mod DependOnFindLibPackage.T:O">
+<em class="property">module </em><code class="descname">O</code><em class="property"> : sig</em><a class="headerlink" href="#mod DependOnFindLibPackage.T:O" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="val">
+<dt id="val DependOnFindLibPackage.T:O.(&lt;)">
+<em class="property">val </em><code class="descname">(&lt;)</code><em class="property">: t -&gt; t -&gt; bool</em><a class="headerlink" href="#val DependOnFindLibPackage.T:O.(<)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="val">
+<dt id="val DependOnFindLibPackage.T:O.(&lt;=)">
+<em class="property">val </em><code class="descname">(&lt;=)</code><em class="property">: t -&gt; t -&gt; bool</em><a class="headerlink" href="#val DependOnFindLibPackage.T:O.(<=)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="val">
+<dt id="val DependOnFindLibPackage.T:O.(&gt;)">
+<em class="property">val </em><code class="descname">(&gt;)</code><em class="property">: t -&gt; t -&gt; bool</em><a class="headerlink" href="#val DependOnFindLibPackage.T:O.(>)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="val">
+<dt id="val DependOnFindLibPackage.T:O.(&gt;=)">
+<em class="property">val </em><code class="descname">(&gt;=)</code><em class="property">: t -&gt; t -&gt; bool</em><a class="headerlink" href="#val DependOnFindLibPackage.T:O.(>=)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
 </div>
 
 

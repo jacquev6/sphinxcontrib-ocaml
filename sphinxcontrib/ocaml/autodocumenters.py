@@ -167,8 +167,18 @@ class ModuleDocumenter(sphinx.ext.autodoc.Documenter):
             print("ERROR: {}.mli not found in any ocaml_source_directories".format(module_name))
             exit(1)
 
+        includes = self.env.config.ocaml_include_directories + [
+            subprocess.run(
+                ["ocamlfind", "query", package],
+                stdout=subprocess.PIPE,
+                universal_newlines=True,
+                check=True,
+            ).stdout.strip()
+            for package in self.env.config.ocaml_findlib_packages
+        ]
+
         contents = json.loads(subprocess.run(
-            [self.env.config.ocaml_autoocamldoc_executable, interface_file_name],
+            [self.env.config.ocaml_autoocamldoc_executable, interface_file_name] + includes,
             stdout=subprocess.PIPE,
             check=True,
             universal_newlines=True,

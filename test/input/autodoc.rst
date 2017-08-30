@@ -19,3 +19,9 @@ Autodoc
 .. autoocamlmodule:: Types
 
 .. autoocamlmodule:: Values
+
+.. autoocamlmodule:: DependOnStdlib
+
+.. autoocamlmodule:: DependOnNum
+
+.. autoocamlmodule:: DependOnFindLibPackage

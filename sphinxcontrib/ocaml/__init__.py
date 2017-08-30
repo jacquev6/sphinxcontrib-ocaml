@@ -19,4 +19,5 @@ def setup(app):
     app.add_autodocumenter(autodocumenters.ModuleDocumenter)
     app.add_config_value("ocaml_autoocamldoc_executable", "autoocamldoc", "env")
     app.add_config_value("ocaml_source_directories", None, "env")
-    # @todo ocaml_include_directories for .cmi files required while parsing the .mli
+    app.add_config_value("ocaml_findlib_packages", [], "env")
+    app.add_config_value("ocaml_include_directories", [], "env")
