@@ -2,6 +2,10 @@
 
 set -o errexit
 
+eval `opam config env`
+opam install --yes bisect_ppx bisect-summary General yojson
+clear
+
 cd autoocamldoc
 ocamlbuild -use-ocamlfind -no-links -package bisect_ppx autoocamldoc.byte
 cd ..
