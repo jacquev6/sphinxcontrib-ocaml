@@ -29,4 +29,4 @@ end
 
 include MT
 
-(** A reference to an exception: :exn:`test/src/ocaml/Exceptions.Simple`. *)
+(** A reference to an exception: :exn:`Exceptions.Simple`. *)

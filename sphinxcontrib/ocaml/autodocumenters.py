@@ -174,6 +174,8 @@ class ModuleDocumenter(sphinx.ext.autodoc.Documenter):
             universal_newlines=True,
         ).stdout)
 
+        contents["name"] = module_name
+
         generator = Generator(contents)
         for line in generator():
             self.add_line(line, "a")  # @todo Set file and line number (for error messages)

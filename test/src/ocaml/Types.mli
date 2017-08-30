@@ -68,4 +68,4 @@ end
 
 include MT
 
-(** A reference to a type: :typ:`test/src/ocaml/Types.parameters`. *)
+(** A reference to a type: :typ:`Types.parameters`. *)
