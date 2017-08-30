@@ -11,6 +11,8 @@ and `autodocumenters <>`_ for `OCaml` elements.
 from . import domain
 from . import autodocumenters
 
+# @todo A doctest-like extension
+
 
 def setup(app):
     app.add_domain(domain.OCamlDomain)
