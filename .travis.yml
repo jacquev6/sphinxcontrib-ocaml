@@ -42,4 +42,4 @@ deploy:
   on:
     tags: true
     repo: jacquev6/sphinxcontrib-ocaml
-    python: 2.7
+    python: 3.6

@@ -8,7 +8,7 @@ from __future__ import division, absolute_import, print_function
 import setuptools
 
 
-version = "0.1.0"
+version = "0.1.1"
 
 setuptools.setup(
     name="sphinxcontrib-ocaml",
