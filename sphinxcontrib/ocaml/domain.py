@@ -41,8 +41,18 @@ class Directive(docutils.parsers.rst.Directive):
     def current_module_prefix(self):
         return self.env.domaindata[OCamlDomain.name]["module_stack"][-1]
 
-    def current_module_name(self):
-        return self.current_module_prefix()[:-1]
+    def get_index_entry(self):
+        container_name = self.current_module_prefix()[:-1]
+        if container_name == "":
+            container = ""
+        else:
+            container_kind = {
+                ".": "",
+                ":": "module type ",
+                "$": "functor parameter ",
+            }[self.current_module_prefix()[-1]]
+            container = " in {}{}".format(container_kind, container_name)
+        return "{} ({}{})".format(self.get_header_name(), self.object_type.replace("_", " "), container)
 
     def append_if_not_none(self, parent, make, child):
         if child is not None:
@@ -118,10 +128,6 @@ class Module(Directive):
     def get_id(self):
         return "mod {}{}".format(self.current_module_prefix(), self.arguments[0])
 
-    def get_index_entry(self):
-        # @todo Don't say "in " when self.current_module_name is ""
-        return "{} (module in {})".format(self.arguments[0], self.current_module_name())
-
     def get_header_prefix(self):
         return "module "
 
@@ -161,10 +167,6 @@ class ModuleType(Directive):
 
     def get_id(self):
         return "modtyp {}{}".format(self.current_module_prefix(), self.arguments[0])
-
-    def get_index_entry(self):
-        # @todo Don't say "in " when self.current_module_name is ""
-        return "{} (module type in {})".format(self.arguments[0], self.current_module_name())
 
     def get_header_prefix(self):
         return "module type "
@@ -259,10 +261,6 @@ class Atom(Directive):
 
     def get_id(self):
         return "{} {}{}".format(self.role, self.current_module_prefix(), self.get_header_name())
-
-    def get_index_entry(self):
-        # @todo Don't say "in " when self.current_module_name is ""
-        return "{} ({} in {})".format(self.get_header_name(), self.object_type, self.current_module_name())
 
     def get_header_prefix(self):
         return "{} ".format(self.object_type)
