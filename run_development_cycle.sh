@@ -12,7 +12,7 @@ cd ..
 
 rm -f bisect????.out
 coverage3 erase
-for f in tests/*.mli
+for f in test/src/ocaml/*.mli
 do
     autoocamldoc/_build/autoocamldoc.byte $f >${f%.mli}.json
     coverage3 run --branch --append sphinxcontrib/ocaml/autoocamldoc.py <${f%.mli}.json >${f%.mli}.rst

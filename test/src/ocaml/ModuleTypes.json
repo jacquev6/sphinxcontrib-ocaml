@@ -1,6 +1,6 @@
 {
   "__class__": "module",
-  "name": "tests/ModuleTypes",
+  "name": "test/src/ocaml/ModuleTypes",
   "hidden": false,
   "doc": [],
   "functor_parameters": [],

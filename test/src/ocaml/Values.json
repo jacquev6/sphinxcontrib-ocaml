@@ -1,6 +1,6 @@
 {
   "__class__": "module",
-  "name": "tests/Values",
+  "name": "test/src/ocaml/Values",
   "hidden": false,
   "doc": [],
   "functor_parameters": [],

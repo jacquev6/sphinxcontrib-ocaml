@@ -1,6 +1,6 @@
 {
   "__class__": "module",
-  "name": "tests/Includes",
+  "name": "test/src/ocaml/Includes",
   "hidden": false,
   "doc": [],
   "functor_parameters": [],
