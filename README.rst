@@ -22,6 +22,13 @@ Questions? Remarks? Bugs? Want to contribute? `Open an issue <https://github.com
 .. image:: https://img.shields.io/github/stars/jacquev6/sphinxcontrib-ocaml.svg
     :target: https://github.com/jacquev6/sphinxcontrib-ocaml/stargazers
 
+Status
+======
+
+sphinxcontrib-ocaml is still highly experimental.
+Interfaces may be changed unannounced.
+We welcome all feedback from our daring early users.
+
 Quick start
 ===========
 
@@ -30,9 +37,8 @@ Install both packages::
     $ pip3 install sphinxcontrib-ocaml
     $ opam install sphinxcontrib-ocaml
 
-Status
-======
+Enable and configure the Sphinx extension in your `conf.py` file::
 
-sphinxcontrib-ocaml is still highly experimental.
-Interfaces may be changed unannounced.
-We welcome all feedback from our daring early users.
+    extensions.append("ocaml")
+    ocaml_source_directories = ["src"]
+    ocaml_findlib_packages = ["batteries", "js_of_ocaml"]
