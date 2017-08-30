@@ -27,7 +27,7 @@ module J = struct
 end
 
 
-(*BISECT-IGNORE*) let warn s v = StdErr.print "WARNING (autoocamldoc): %s\n" s; v
+(*BISECT-IGNORE*) let warn s v = StdErr.print "WARNING (sphinxcontrib-ocaml): %s\n" s; v
 
 
 module Name: sig
@@ -1159,7 +1159,7 @@ end = struct
         signature_item env item
       with
         | ModTypeNotFound name ->
-          StdErr.print "WARNING (autoocamldoc): Module type not found: %s (this is a known bug in autoocamldoc, we'd love some help from a compiler-libs expert)\n" name;
+          StdErr.print "WARNING (sphinxcontrib-ocaml): Module type not found: %s (this is a known bug in sphinxcontrib-ocaml, we'd love some help from a compiler-libs expert)\n" name;
           KnownBug.mod_type_not_found name
 
     let signature env items =
@@ -1365,7 +1365,7 @@ let () =
       Str.drop_suffix ~suf:".mli" interface_file_name
     and signature =
       interface_file_name
-      |> Pparse.parse_interface ~tool_name:"autoocamldoc" OCamlStandard.Format.err_formatter
+      |> Pparse.parse_interface ~tool_name:"sphinxcontrib-ocaml" OCamlStandard.Format.err_formatter
       |> Typemod.type_interface "Foo?" (Compmisc.initial_env ())
     in
     Module.OfTypedtree.signature name signature
