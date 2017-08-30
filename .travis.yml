@@ -21,8 +21,8 @@ install:
   - pip install --upgrade pip setuptools
   - pip install --upgrade coverage sphinx coveralls
 script:
-  - cd autoocamldoc
-  - ocamlbuild -use-ocamlfind -no-links autoocamldoc.byte
+  - cd ocaml_autodoc
+  - ocamlbuild -use-ocamlfind -no-links ocaml_autodoc.byte
   - cd ..
   - coverage run --branch --include "sphinxcontrib/*" $(which sphinx-build) test/input test/output -d build/test_doctrees
   - git diff --exit-code test

@@ -12,8 +12,8 @@ clear
 
 # Build
 
-cd autoocamldoc
-ocamlbuild -use-ocamlfind -no-links -package bisect_ppx autoocamldoc.byte
+cd ocaml_autodoc
+ocamlbuild -use-ocamlfind -no-links -package bisect_ppx ocaml_autodoc.byte
 cd ..
 
 # Test
@@ -31,9 +31,9 @@ bisect-summary bisect????.out
 echo
 coverage3 report
 echo
-bisect-ppx-report -I autoocamldoc -html autoocamldoc/_build/bisect bisect????.out
+bisect-ppx-report -I ocaml_autodoc -html ocaml_autodoc/_build/bisect bisect????.out
 coverage3 html --directory build/coverage
-echo "See coverage reports in $(pwd)/autoocamldoc/_build/bisect/index.html"
+echo "See coverage reports in $(pwd)/ocaml_autodoc/_build/bisect/index.html"
 echo "and $(pwd)/build/coverage/index.html"
 echo
 

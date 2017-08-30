@@ -140,8 +140,8 @@ class Generator:
         yield ""
         yield from self.__indent(self.__doc(exception_))
 
-    def __item_autoocamldoc_bug(self, bug):
-        yield "Known bug in autoocamldoc (we'd love some help from a compiler-libs expert): {} {}".format(
+    def __item_known_bug(self, bug):
+        yield "Known bug in sphinxcontrib-ocaml (we'd love some help from a compiler-libs expert): {} {}".format(
             bug.pop("kind"),
             bug.pop("name"),
         )
@@ -178,7 +178,7 @@ class ModuleDocumenter(sphinx.ext.autodoc.Documenter):
         ]
 
         contents = json.loads(subprocess.run(
-            [self.env.config.ocaml_autoocamldoc_executable, interface_file_name] + includes,
+            [self.env.config.ocaml_autodoc_executable, interface_file_name] + includes,
             stdout=subprocess.PIPE,
             check=True,
             universal_newlines=True,

@@ -18,7 +18,7 @@ from . import autodocumenters
 def setup(app):
     app.add_domain(domain.OCamlDomain)
     app.add_autodocumenter(autodocumenters.ModuleDocumenter)
-    app.add_config_value("ocaml_autoocamldoc_executable", "autoocamldoc", "env")
+    app.add_config_value("ocaml_autodoc_executable", "sphinxcontrib-ocaml-autodoc", "env")
     app.add_config_value("ocaml_source_directories", None, "env")
     app.add_config_value("ocaml_findlib_packages", [], "env")
     app.add_config_value("ocaml_include_directories", [], "env")
