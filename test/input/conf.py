@@ -22,3 +22,5 @@ html_sidebars = {
 # Development version
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "sphinxcontrib")))
 extensions.append("ocaml")
+ocaml_autoocamldoc_executable = "autoocamldoc/_build/autoocamldoc.byte"
+ocaml_source_directories = ["test/src/ocaml"]
