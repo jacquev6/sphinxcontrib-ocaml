@@ -191,7 +191,7 @@ class FunctorParameter(Directive):
     }
 
     object_type = "functor_parameter"
-    contents_separator = "!"
+    contents_separator = "$"
 
     def get_id(self):
         return None
@@ -357,7 +357,7 @@ class Exception(Atom):
 class XRefRole(sphinx.roles.XRefRole):
     def process_link(self, env, refnode, has_explicit_title, title, target):
         if not has_explicit_title:
-            title = title.replace(":", ".").replace("!", ".").lstrip("~").lstrip(".")
+            title = title.replace(":", ".").replace("$", ".").lstrip("~").lstrip(".")
             if target[0] == "~":
                 target = target[1:]
                 title = title.split(".")[-1]
@@ -412,8 +412,21 @@ class OCamlDomain(sphinx.domains.Domain):
     # - functor parameters
 
     def resolve_xref(self, env, fromdocname, builder, role, target, node, child):
-        # @todo If target starts with '.' or ':' or '!', look for objects in all possible prefixes.
-        todocname = self.data[role].get(target)
+        data = self.data[role]
+        if any(target.startswith(prefix) for prefix in ".:$"):
+            # If we ever have a performance issue here, we can build a index instead of enumerating
+            matches = [(k, v) for (k, v) in data.items() if k.endswith(target)]
+            best_matches = [(k, v) for (k, v) in matches if v == fromdocname]
+            if len(best_matches) == 1:
+                (target, todocname) = best_matches[0]
+            elif len(matches) == 1:
+                (target, todocname) = matches[0]
+            else:
+                todocname = None
+                if matches:
+                    print("ERROR: multiple matches for target '{}'".format(target))
+        else:
+            todocname = data.get(target)
         if todocname:
             targetid = "{} {}".format(role, target)
             return sphinx.util.nodes.make_refnode(builder, fromdocname, todocname, targetid, child)

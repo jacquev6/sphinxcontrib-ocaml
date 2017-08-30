@@ -42,6 +42,8 @@ Type: :typ:`Container.t`, value: :val:`Container.v`, exception: :exn:`Container.
 
 Type: :typ:`~Container.t`, value: :val:`~Container.v`, exception: :exn:`~Container.e`, module type: :modtyp:`~Container.MT` and module: :mod:`~Container.M`.
 
+Type: :typ:`.t`, value: :val:`.v`, exception: :exn:`.e`, module type: :modtyp:`.MT` and module: :mod:`.M`.
+
 .. module_type:: Container
 
     .. type:: t
@@ -58,6 +60,8 @@ Type: :typ:`Container:t`, value: :val:`Container:v`, exception: :exn:`Container:
 
 Type: :typ:`~Container:t`, value: :val:`~Container:v`, exception: :exn:`~Container:e`, module type: :modtyp:`~Container:MT` and module: :mod:`~Container:M`.
 
+Type: :typ:`:t`, value: :val:`:v`, exception: :exn:`:e`, module type: :modtyp:`:MT` and module: :mod:`:M`.
+
 .. module:: Functor
 
     .. functor_parameter:: Container
@@ -72,9 +76,13 @@ Type: :typ:`~Container:t`, value: :val:`~Container:v`, exception: :exn:`~Contain
 
         .. module:: M
 
-Type: :typ:`Functor.Container!t`, value: :val:`Functor.Container!v`, exception: :exn:`Functor.Container!e`, module type: :modtyp:`Functor.Container!MT` and module: :mod:`Functor.Container!M`.
+Type: :typ:`Functor.Container$t`, value: :val:`Functor.Container$v`, exception: :exn:`Functor.Container$e`, module type: :modtyp:`Functor.Container$MT` and module: :mod:`Functor.Container$M`.
 
-Type: :typ:`~Functor.Container!t`, value: :val:`~Functor.Container!v`, exception: :exn:`~Functor.Container!e`, module type: :modtyp:`~Functor.Container!MT` and module: :mod:`~Functor.Container!M`.
+Type: :typ:`~Functor.Container$t`, value: :val:`~Functor.Container$v`, exception: :exn:`~Functor.Container$e`, module type: :modtyp:`~Functor.Container$MT` and module: :mod:`~Functor.Container$M`.
+
+Type: :typ:`.Container$t`, value: :val:`.Container$v`, exception: :exn:`.Container$e`, module type: :modtyp:`.Container$MT` and module: :mod:`.Container$M`.
+
+Type: :typ:`$t`, value: :val:`$v`, exception: :exn:`$e`, module type: :modtyp:`$MT` and module: :mod:`$M`.
 
 Elements with same name
 -----------------------
