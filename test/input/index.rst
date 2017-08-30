@@ -7,5 +7,4 @@ Test project for Sphinx OCaml
     both_domains
     all_references
     indices
-
-.. @todo Investigate what sphinx-apidoc does
+    autodoc

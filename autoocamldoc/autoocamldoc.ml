@@ -1348,13 +1348,23 @@ end
 
 
 let () =
+  let (interface_file_name, include_directories) =
+    match Li.of_array OCamlStandard.Sys.argv with
+      | _::interface_file_name::include_directories ->
+        (interface_file_name, include_directories)
+      | _ -> begin
+        StdErr.print "Usage: %s INTERFACE_FILE_NAME [INCLUDE_DIRECTORY, ...]\n" OCamlStandard.Sys.argv.(0);
+        Exit.(exit (Failure 1)) (*BISECT-IGNORE*)
+      end
+  in
   Clflags.dont_write_files := true;
+  Clflags.include_dirs := include_directories;
   Compmisc.init_path false;
   try
     let name =
-      Str.drop_suffix ~suf:".mli" OCamlStandard.Sys.argv.(1)
+      Str.drop_suffix ~suf:".mli" interface_file_name
     and signature =
-      OCamlStandard.Sys.argv.(1)
+      interface_file_name
       |> Pparse.parse_interface ~tool_name:"autoocamldoc" OCamlStandard.Format.err_formatter
       |> Typemod.type_interface "Foo?" (Compmisc.initial_env ())
     in

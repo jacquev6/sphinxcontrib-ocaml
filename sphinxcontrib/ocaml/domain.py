@@ -2,11 +2,6 @@
 
 # Copyright 2017 Vincent Jacques <vincent@vincent-jacques.net>
 
-"""
-A `Sphinx <http://www.sphinx-doc.org>`_ extension providing an `OCaml`
-`domain <http://www.sphinx-doc.org/en/stable/domains.html>`_.
-"""
-
 import itertools
 import json
 
@@ -69,6 +64,7 @@ class Directive(docutils.parsers.rst.Directive):
         ident = self.get_id()
         if ident is not None:
             if ident in self.state.document.ids:
+                # @todo Use Sphinx's warnings and errors infrastructure
                 print("WARNING: Duplicate:", ident)
             header_node["first"] = False
             header_node["ids"].append(ident)
@@ -422,6 +418,7 @@ class OCamlDomain(sphinx.domains.Domain):
             else:
                 todocname = None
                 if matches:
+                    # @todo Use Sphinx's warnings and errors infrastructure
                     print("ERROR: multiple matches for target '{}'".format(target))
         else:
             todocname = data.get(target)

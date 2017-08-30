@@ -1,7 +1,7 @@
 module type MT = sig
-  (** Doc for Single *)
+  (** Doc for Simple *)
   exception Simple
-  (** Doc' for Single *)
+  (** Doc' for Simple *)
 
   (** Doc for Hidden *)
   exception Hidden [@@autodoc.hide]
@@ -29,4 +29,4 @@ end
 
 include MT
 
-(** A reference to an exception: :exn:`tests/Exceptions.Simple`. *)
+(** A reference to an exception: :exn:`Exceptions.Simple`. *)

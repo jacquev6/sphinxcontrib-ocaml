@@ -68,4 +68,4 @@ end
 
 include MT
 
-(** A reference to a type: :typ:`tests/Types.parameters`. *)
+(** A reference to a type: :typ:`Types.parameters`. *)
