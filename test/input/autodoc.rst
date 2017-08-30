@@ -1,0 +1,5 @@
+=======
+Autodoc
+=======
+
+.. autoocamlmodule:: Auto

@@ -2,11 +2,6 @@
 
 # Copyright 2017 Vincent Jacques <vincent@vincent-jacques.net>
 
-"""
-A `Sphinx <http://www.sphinx-doc.org>`_ extension providing an `OCaml`
-`domain <http://www.sphinx-doc.org/en/stable/domains.html>`_.
-"""
-
 import itertools
 import json
 
