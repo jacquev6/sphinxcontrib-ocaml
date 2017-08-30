@@ -354,6 +354,16 @@ class Exception(Atom):
             return " of {}".format(payload)
 
 
+class XRefRole(sphinx.roles.XRefRole):
+    def process_link(self, env, refnode, has_explicit_title, title, target):
+        if not has_explicit_title:
+            title = title.replace(":", ".").replace("!", ".").lstrip("~").lstrip(".")
+            if target[0] == "~":
+                target = target[1:]
+                title = title.split(".")[-1]
+        return (title, target)
+
+
 class OCamlDomain(sphinx.domains.Domain):
     name = "ocaml"
     label = "OCaml"
@@ -376,12 +386,12 @@ class OCamlDomain(sphinx.domains.Domain):
         FunctorParameter.object_type: FunctorParameter,
     }
     roles = {
-        Module.role: sphinx.roles.XRefRole(),
-        ModuleType.role: sphinx.roles.XRefRole(),
+        Module.role: XRefRole(),
+        ModuleType.role: XRefRole(),
         # @todo Add a role for functor parameters
-        Value.role: sphinx.roles.XRefRole(),
-        Type.role: sphinx.roles.XRefRole(),
-        Exception.role: sphinx.roles.XRefRole(),
+        Value.role: XRefRole(),
+        Type.role: XRefRole(),
+        Exception.role: XRefRole(),
     }
     initial_data = {
         "module_stack": [""],
@@ -402,11 +412,10 @@ class OCamlDomain(sphinx.domains.Domain):
     # - functor parameters
 
     def resolve_xref(self, env, fromdocname, builder, role, target, node, child):
+        # @todo If target starts with '.' or ':' or '!', look for objects in all possible prefixes.
         todocname = self.data[role].get(target)
         if todocname:
             targetid = "{} {}".format(role, target)
-            # @todo Replace '!'s and ':'s by '.'s in the caption
-            # @todo Handle captions starting by '~' and '.' the same way the Python domain does (Beware of explicit titles in both cases)
             return sphinx.util.nodes.make_refnode(builder, fromdocname, todocname, targetid, child)
         else:
             return None

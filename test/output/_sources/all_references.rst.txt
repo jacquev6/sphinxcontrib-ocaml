@@ -21,6 +21,8 @@ Top-level elements
 
 Type: :typ:`top_level_type`, value: :val:`top_level_value`, exception: :exn:`TopLevelException`, module type: :modtyp:`TopLevelModuleType` and module: :mod:`TopLevelModule`.
 
+Type: :typ:`~top_level_type`, value: :val:`~top_level_value`, exception: :exn:`~TopLevelException`, module type: :modtyp:`~TopLevelModuleType` and module: :mod:`~TopLevelModule`.
+
 Elements within module, module type and functor parameter
 ---------------------------------------------------------
 
@@ -38,6 +40,8 @@ Elements within module, module type and functor parameter
 
 Type: :typ:`Container.t`, value: :val:`Container.v`, exception: :exn:`Container.e`, module type: :modtyp:`Container.MT` and module: :mod:`Container.M`.
 
+Type: :typ:`~Container.t`, value: :val:`~Container.v`, exception: :exn:`~Container.e`, module type: :modtyp:`~Container.MT` and module: :mod:`~Container.M`.
+
 .. module_type:: Container
 
     .. type:: t
@@ -51,6 +55,8 @@ Type: :typ:`Container.t`, value: :val:`Container.v`, exception: :exn:`Container.
     .. module:: M
 
 Type: :typ:`Container:t`, value: :val:`Container:v`, exception: :exn:`Container:e`, module type: :modtyp:`Container:MT` and module: :mod:`Container:M`.
+
+Type: :typ:`~Container:t`, value: :val:`~Container:v`, exception: :exn:`~Container:e`, module type: :modtyp:`~Container:MT` and module: :mod:`~Container:M`.
 
 .. module:: Functor
 
@@ -68,6 +74,8 @@ Type: :typ:`Container:t`, value: :val:`Container:v`, exception: :exn:`Container:
 
 Type: :typ:`Functor.Container!t`, value: :val:`Functor.Container!v`, exception: :exn:`Functor.Container!e`, module type: :modtyp:`Functor.Container!MT` and module: :mod:`Functor.Container!M`.
 
+Type: :typ:`~Functor.Container!t`, value: :val:`~Functor.Container!v`, exception: :exn:`~Functor.Container!e`, module type: :modtyp:`~Functor.Container!MT` and module: :mod:`~Functor.Container!M`.
+
 Elements with same name
 -----------------------
 
@@ -83,4 +91,4 @@ Elements with same name
 
     .. module:: x
 
-Type: :typ:`SameName.x`, value: :val:`SameName.x`, exception: :exn:`SameName.x`, module type: :modtyp:`SameName.x` and module: :mod:`SameName.x`.
+Type: :typ:`~SameName.x`, value: :val:`~SameName.x`, exception: :exn:`~SameName.x`, module type: :modtyp:`~SameName.x` and module: :mod:`~SameName.x`.

@@ -42,11 +42,17 @@ We can link to sub-modules: :ocaml:mod:`M.S` and :py:mod:`M.S`.
 
 We can link to fully qualified values: :ocaml:val:`M.S.v` and :py:data:`M.S.v`.
 
-We can link to fully qualified values and strip their qualifications: @todo ocaml:val:`~M.S.v` and :py:data:`~M.S.v`.
+We can link to fully qualified values with explicit titles: :ocaml:val:`vv <M.S.v>` and :py:data:`vv <M.S.v>`.
+
+We can link to fully qualified values and strip their qualifications: :ocaml:val:`~M.S.v` and :py:data:`~M.S.v`.
 
 We can link to non-qualified values: @todo ocaml:val:`.v` and :py:data:`.v`.
 
+We can link to non-qualified values with explicit titles: @todo ocaml:val:`vv <.v>` and :py:data:`vv <.v>`.
+
 We can link to partially qualified values: @todo ocaml:val:`.S.v` and :py:data:`.S.v`.
+
+We can link to partially qualified values with explicit titles: @todo ocaml:val:`vv <.S.v>` and :py:data:`vv <.S.v>`.
 
 We can link to partially qualified values and strip their qualifications: @todo ocaml:val:`~.S.v` and :py:data:`~.S.v`.
 
