@@ -6,6 +6,7 @@ project = "Test project for sphinx-ocaml"
 author = '<a href="http://vincent-jacques.net/">Vincent Jacques</a>'
 copyright = '2017 {}'.format(author)
 
+nitpicky = True
 master_doc = "index"
 extensions = []
 
