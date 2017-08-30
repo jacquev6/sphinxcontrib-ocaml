@@ -12,6 +12,7 @@ from . import domain
 from . import autodocumenters
 
 # @todo A doctest-like extension
+# @todo intersphinx?
 
 
 def setup(app):
