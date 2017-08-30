@@ -1,6 +1,6 @@
-============
-Sphinx OCaml
-============
+===================
+sphinxcontrib-ocaml
+===================
 
 .. include:: ../README.rst
 

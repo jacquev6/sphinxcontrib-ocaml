@@ -46,7 +46,7 @@ pep8 --max-line-length=120 sphinxcontrib *.py doc/conf.py
 
 ./setup.py --quiet install --user
 opam pin --yes --no-action add .
-opam reinstall --yes sphinx-ocaml
+opam reinstall --yes sphinxcontrib-ocaml
 
 rm -rf docs build/sphinx
 ./setup.py build_sphinx

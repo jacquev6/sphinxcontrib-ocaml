@@ -2,7 +2,7 @@
 
 # Copyright 2017 Vincent Jacques <vincent@vincent-jacques.net>
 
-project = "sphinx-ocaml"
+project = "sphinxcontrib-ocaml"
 author = '<a href="http://vincent-jacques.net/">Vincent Jacques</a>'
 copyright = ('2017 {} <script>var jacquev6_ribbon_github="{}"</script>'.format(author, project) +
              '<script src="https://jacquev6.github.io/ribbon.js"></script>')
@@ -23,5 +23,5 @@ html_theme_options = {
     "travis_button": True,
 }
 
-# https://github.com/jacquev6/sphinx-ocaml
+# https://github.com/jacquev6/sphinxcontrib-ocaml
 extensions.append("sphinxcontrib.ocaml")

@@ -7,7 +7,7 @@ import sys
 import subprocess
 
 
-project = "Test project for sphinx-ocaml"
+project = "Test project"
 author = '<a href="http://vincent-jacques.net/">Vincent Jacques</a>'
 copyright = '2017 {}'.format(author)
 
