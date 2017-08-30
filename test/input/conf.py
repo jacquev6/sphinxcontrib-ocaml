@@ -2,6 +2,10 @@
 
 # Copyright 2017 Vincent Jacques <vincent@vincent-jacques.net>
 
+import os.path
+import sys
+
+
 project = "Test project for sphinx-ocaml"
 author = '<a href="http://vincent-jacques.net/">Vincent Jacques</a>'
 copyright = '2017 {}'.format(author)
@@ -15,5 +19,6 @@ html_sidebars = {
     "**": ["about.html", "navigation.html", "searchbox.html"],
 }
 
-# https://github.com/jacquev6/sphinx-ocaml
-extensions.append("sphinxcontrib.ocaml")
+# Development version
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "sphinxcontrib")))
+extensions.append("ocaml")

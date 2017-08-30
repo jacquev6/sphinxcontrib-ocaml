@@ -119,6 +119,7 @@ class Module(Directive):
         return "mod {}{}".format(self.current_module_prefix(), self.arguments[0])
 
     def get_index_entry(self):
+        # @todo Don't say "in " when self.current_module_name is ""
         return "{} (module in {})".format(self.arguments[0], self.current_module_name())
 
     def get_header_prefix(self):
@@ -162,6 +163,7 @@ class ModuleType(Directive):
         return "modtyp {}{}".format(self.current_module_prefix(), self.arguments[0])
 
     def get_index_entry(self):
+        # @todo Don't say "in " when self.current_module_name is ""
         return "{} (module type in {})".format(self.arguments[0], self.current_module_name())
 
     def get_header_prefix(self):
@@ -259,9 +261,8 @@ class Atom(Directive):
         return "{} {}{}".format(self.role, self.current_module_prefix(), self.get_header_name())
 
     def get_index_entry(self):
+        # @todo Don't say "in " when self.current_module_name is ""
         return "{} ({} in {})".format(self.get_header_name(), self.object_type, self.current_module_name())
-        if name in self.state.document.ids:
-            print("WARNING: Duplicate:", name)
 
     def get_header_prefix(self):
         return "{} ".format(self.object_type)
@@ -362,6 +363,7 @@ class OCamlDomain(sphinx.domains.Domain):
         Value.object_type: sphinx.domains.ObjType(Value.object_type, Value.role),
         Type.object_type: sphinx.domains.ObjType(Type.object_type, Type.role),
         Exception.object_type: sphinx.domains.ObjType(Exception.object_type, Exception.role),
+        # @todo Add an object type for functor parameters
     }
     directives = {
         Module.object_type: Module,
@@ -376,6 +378,7 @@ class OCamlDomain(sphinx.domains.Domain):
     roles = {
         Module.role: sphinx.roles.XRefRole(),
         ModuleType.role: sphinx.roles.XRefRole(),
+        # @todo Add a role for functor parameters
         Value.role: sphinx.roles.XRefRole(),
         Type.role: sphinx.roles.XRefRole(),
         Exception.role: sphinx.roles.XRefRole(),
@@ -398,10 +401,12 @@ class OCamlDomain(sphinx.domains.Domain):
     # - labels
     # - functor parameters
 
-    def resolve_xref(self, env, fromdocname, builder, role, target, node, contnode):
-        docname = self.data[role].get(target)
-        if docname:
-            target = "{} {}".format(role, target)
-            return sphinx.util.nodes.make_refnode(builder, fromdocname, docname, target, contnode, None)
+    def resolve_xref(self, env, fromdocname, builder, role, target, node, child):
+        todocname = self.data[role].get(target)
+        if todocname:
+            targetid = "{} {}".format(role, target)
+            # @todo Replace '!'s and ':'s by '.'s in the caption
+            # @todo Handle captions starting by '~' and '.' the same way the Python domain does (Beware of explicit titles in both cases)
+            return sphinx.util.nodes.make_refnode(builder, fromdocname, todocname, targetid, child)
         else:
             return None
