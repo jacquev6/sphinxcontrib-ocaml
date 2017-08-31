@@ -298,7 +298,6 @@ class Type(Atom):
         "noindex": docutils.parsers.rst.directives.flag,
 
         "parameters": docutils.parsers.rst.directives.unchanged,
-        "private": docutils.parsers.rst.directives.flag,
         "manifest": docutils.parsers.rst.directives.unchanged,
         "kind": docutils.parsers.rst.directives.unchanged,
     }
@@ -311,14 +310,10 @@ class Type(Atom):
             return "type "
 
     def get_header_suffix(self):
-        private = ""
-        if "private" in self.options:
-            private = "private "
-
         def suffix(key):
             value = self.options.get(key)
             if value:
-                return " = {}{}".format(private, value)
+                return " = {}".format(value)
             else:
                 return ""
 

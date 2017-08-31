@@ -596,43 +596,37 @@ end = struct
 end
 
 
-module TypePrivate: sig
-  val of_private_flag: Asttypes.private_flag -> J.a
-end = struct
-  let bool_of_private_flag = function
-    | Asttypes.Private -> true
-    | Asttypes.Public -> false
-
-  let of_private_flag f =
-    ("private", f |> bool_of_private_flag |> J.bo)
-end
-
 module TypeManifest: sig
   module OfTypedtree: sig
     open Typedtree
-    val core_type_option: core_type option -> J.a
+    val core_type_option: Asttypes.private_flag -> core_type option -> J.a
   end
 
   module OfTypes: sig
     open Types
-    val type_expr_option: type_expr option -> J.a
+    val type_expr_option: Asttypes.private_flag -> type_expr option -> J.a
   end
 end = struct
-  let of_string_option s =
-      ("manifest", s |> Opt.map ~f:J.str |> J.opt)
+  let of_string_option private_ s =
+    let frmt =
+      match private_ with
+        | Asttypes.Private -> Frmt.of_string "private %s"
+        | Asttypes.Public -> Frmt.of_string "%s"
+    in
+    ("manifest", s |> Opt.map ~f:(Frmt.apply frmt) |> Opt.map ~f:J.str |> J.opt)
 
   module OfTypedtree = struct
-    let core_type_option t =
+    let core_type_option private_ t =
       t
       |> Opt.map ~f:string_of_core_type
-      |> of_string_option
+      |> of_string_option private_
   end
 
   module OfTypes = struct
-    let type_expr_option t =
+    let type_expr_option private_ t =
       t
       |> Opt.map ~f:string_of_type_expr
-      |> of_string_option
+      |> of_string_option private_
   end
 end
 
@@ -698,21 +692,26 @@ end
 module TypeKind: sig
   module OfTypedtree: sig
     open Typedtree
-    val type_kind: type_kind -> J.a
+    val type_kind: Asttypes.private_flag -> type_kind -> J.a
   end
 
   module OfTypes: sig
     open Types
-    val type_kind: type_kind -> J.a
+    val type_kind: Asttypes.private_flag -> type_kind -> J.a
   end
 end = struct
-  let of_string s =
-    ("kind", J.str s)
+  let of_string private_ s =
+    let frmt =
+      match private_ with
+        | Asttypes.Private -> Frmt.of_string "private %s"
+        | Asttypes.Public -> Frmt.of_string "%s"
+    in
+    ("kind", s |> Frmt.apply frmt |> J.str)
 
   let empty = ("kind", J.null)
 
   module OfTypedtree = struct
-    let type_kind = function
+    let type_kind private_ = function
       | Typedtree.Ttype_abstract ->
         empty
       | Typedtree.Ttype_variant declarations ->
@@ -734,17 +733,17 @@ end = struct
           Frmt.apply "%s%s" txt payload
         )
         |> StrLi.join ~sep:" | "
-        |> of_string
+        |> of_string private_
       | Typedtree.Ttype_record declarations ->
         declarations
         |> string_of_typedtree_record
-        |> of_string
+        |> of_string private_
       | Typedtree.Ttype_open ->
-        of_string ".."
+        of_string private_ ".."
   end
 
   module OfTypes = struct
-    let type_kind = function
+    let type_kind private_ = function
       | Types.Type_abstract ->
         empty
       | Types.Type_variant declarations ->
@@ -766,13 +765,13 @@ end = struct
           Frmt.apply "%s%s" (Ident.name cd_id) payload
         )
         |> StrLi.join ~sep:" | "
-        |> of_string
+        |> of_string private_
       | Types.Type_record (declarations, _) ->
         declarations
         |> string_of_types_record
-        |> of_string
+        |> of_string private_
       | Types.Type_open ->
-        of_string ".."
+        of_string private_ ".."
   end
 end
 
@@ -795,9 +794,8 @@ end = struct
         Hidden.OfTypedtree.attributes typ_attributes;
         Doc.OfTypedtree.attributes typ_attributes;
         TypeParameters.OfTypedtree.type_parameters typ_params;
-        TypePrivate.of_private_flag typ_private;
-        TypeManifest.OfTypedtree.core_type_option typ_manifest;
-        TypeKind.OfTypedtree.type_kind typ_kind;
+        TypeManifest.OfTypedtree.core_type_option typ_private typ_manifest;
+        TypeKind.OfTypedtree.type_kind typ_private typ_kind;
         TypeConstructors.OfTypedtree.type_kind typ_kind;
         RecordLabels.OfTypedtree.type_kind typ_kind;
       ]
@@ -810,9 +808,8 @@ end = struct
         Hidden.default;
         Doc.OfTypedtree.attributes type_attributes;
         TypeParameters.OfTypes.type_exprs_and_variances type_params type_variance;
-        TypePrivate.of_private_flag type_private;
-        TypeManifest.OfTypes.type_expr_option type_manifest;
-        TypeKind.OfTypes.type_kind type_kind;
+        TypeManifest.OfTypes.type_expr_option type_private type_manifest;
+        TypeKind.OfTypes.type_kind type_private type_kind;
         TypeConstructors.OfTypes.type_kind type_kind;
         RecordLabels.OfTypes.type_kind type_kind;
       ]

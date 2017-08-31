@@ -148,23 +148,6 @@ Values and types
 
             :label b: b
 
-    The type can be marked as `private <https://caml.inria.fr/pub/docs/manual-ocaml-4.05/extn.html#sec220>`_ using the ``:private:`` flag::
-
-        .. type:: int_list_p
-            :private:
-            :manifest: int list
-
-            A list of integers.
-
-    ..
-
-        .. type:: int_list_p
-            :noindex:
-            :private:
-            :manifest: int list
-
-            A list of integers.
-
     Refer to types using the :rst:role:`typ` role.
 
 .. rst:directive:: .. exception:: name

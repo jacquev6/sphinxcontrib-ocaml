@@ -112,8 +112,6 @@ class Generator:
         parameters = type_.pop("parameters")
         if parameters is not None:
             yield "  :parameters: {}".format(parameters)
-        if type_.pop("private"):
-            yield "  :private:"
         manifest = type_.pop("manifest")
         if manifest is not None:
             yield "  :manifest: {}".format(manifest)
