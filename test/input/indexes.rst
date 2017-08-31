@@ -1,5 +1,5 @@
 ==================
-Indices and tables
+Indexes and tables
 ==================
 
 :ref:`General index <genindex>` (all domains).

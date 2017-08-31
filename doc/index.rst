@@ -12,7 +12,7 @@ Contents
     user_guide
     reference
 
-Indices and tables
+Indexes and tables
 ==================
 
 * :ref:`genindex`

@@ -6,5 +6,5 @@ Test project
 
     both_domains
     all_references
-    indices
+    indexes
     autodoc

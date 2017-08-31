@@ -383,8 +383,8 @@ Functors
 Roles
 =====
 
-Some `directives`_ create entries in the :ref:`general index <genindex>` and other `indices`_.
-You can avoid creating entries by using their ``:noindex:`` option. (That's what we've secretly done above, to avoid polluting the indices.)
+Some `directives`_ create entries in the :ref:`general index <genindex>` and other `indexes`_.
+You can avoid creating entries by using their ``:noindex:`` option. (That's what we've secretly done above, to avoid polluting the indexes.)
 
 .. rst:role:: val
 
@@ -430,5 +430,5 @@ You can avoid creating entries by using their ``:noindex:`` option. (That's what
 
         .. val:: v3
 
-Indices
+Indexes
 =======
