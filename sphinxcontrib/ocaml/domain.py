@@ -19,8 +19,10 @@ def desc_name(s):
     return sphinx.addnodes.desc_name(s, s)
 
 
-def desc_signature():
-    return sphinx.addnodes.desc_signature("", "")
+def desc_signature(*children):
+    node = sphinx.addnodes.desc_signature("", "")
+    node += children
+    return node
 
 
 def identity(x):
@@ -47,34 +49,10 @@ class Directive(docutils.parsers.rst.Directive):
                 "$": "functor parameter ",
             }[self.current_module_prefix()[-1]]
             container = " in {}{}".format(container_kind, container_name)
-        return "{} ({}{})".format(self.get_header_name(), self.object_type.replace("_", " "), container)
-
-    def append_if_not_none(self, parent, make, child):
-        if child is not None:
-            parent.append(make(child))
+        return "{} ({}{})".format(self.arguments[0], self.object_type.replace("_", " "), container)
 
     def run(self):
         self.env = self.state.document.settings.env
-
-        should_index = "noindex" not in self.options
-
-        header_node = self.make_header_node()
-
-        index_node = sphinx.addnodes.index(entries=[])
-        ident = self.get_id()
-        if ident is not None:
-            if ident in self.state.document.ids:
-                # @todo Use Sphinx's warnings and errors infrastructure
-                print("WARNING: Duplicate:", ident)
-            header_node["first"] = False
-            header_node["ids"].append(ident)
-            self.state.document.note_explicit_target(header_node)
-
-            if should_index:
-                index_entry = self.get_index_entry()
-                if index_entry is not None:
-                    self.env.domaindata[OCamlDomain.name][self.role][ident.split()[-1]] = self.env.docname
-                    index_node["entries"].append(("single", index_entry, ident, "", None))
 
         contents_node = desc_content()
         if self.contents_separator is not None:
@@ -87,29 +65,58 @@ class Directive(docutils.parsers.rst.Directive):
         # @todo Maybe labels and constructors should be directives instead of docfields?
         sphinx.util.docfields.DocFieldTransformer(self).transform_all(contents_node)
 
-        footer_node = self.make_footer_node()
-
         main_node = desc()
         main_node["objtype"] = self.object_type
-        self.append_if_not_none(main_node, identity, header_node)
-        self.append_if_not_none(main_node, identity, contents_node)
-        self.append_if_not_none(main_node, identity, footer_node)
+        for node in self.make_nodes(contents_node):
+            main_node += node
+
+        header_node = main_node[0]
+        assert isinstance(header_node, sphinx.addnodes.desc_signature), header_node
+
+        index_node = sphinx.addnodes.index(entries=[])
+        ident = self.get_id()
+        if ident is not None:
+            if ident in self.state.document.ids:
+                # @todo Use Sphinx's warnings and errors infrastructure
+                print("WARNING: Duplicate:", ident)
+            header_node["first"] = False
+            header_node["ids"].append(ident)
+
+            if "noindex" not in self.options:
+                index_entry = self.get_index_entry()
+                if index_entry is not None:
+                    self.env.domaindata[OCamlDomain.name][self.role][ident.split()[-1]] = self.env.docname
+                    index_node["entries"].append(("single", index_entry, ident, "", None))
+
         return [index_node, main_node]
 
-    def make_header_node(self):
-        header_node = desc_signature()
-        self.append_if_not_none(header_node, desc_annotation, self.get_header_prefix())
-        self.append_if_not_none(header_node, desc_name, self.get_header_name())
-        self.append_if_not_none(header_node, desc_annotation, self.get_header_suffix())
-        return header_node
 
-    def make_footer_node(self):
-        footer_node = desc_signature()
-        self.append_if_not_none(footer_node, desc_annotation, self.get_footer())
-        return footer_node
+class Container(Directive):
+    def make_nodes(self, contents_node):
+        functor_parameters = desc_content()
+        contents = desc_content()
+        for node in contents_node.children:
+            if node.get("objtype") == FunctorParameter.object_type:
+                functor_parameters += node
+            else:
+                contents += node
+
+        yield desc_signature(*self.make_signature_nodes(functor_parameters))
+        if functor_parameters.children:
+            yield functor_parameters
+            yield desc_signature(desc_annotation("-> sig"))
+        yield contents
+        footer = self.get_footer()
+        if footer is not None:
+            yield desc_signature(desc_annotation(footer))
+
+    def make_signature_nodes(self, functor_parameters):
+        yield desc_annotation(self.get_header_prefix())
+        yield desc_name(self.arguments[0])
+        yield desc_annotation(self.get_header_suffix(functor_parameters))
 
 
-class Module(Directive):
+class Module(Container):
     option_spec = {
         "noindex": docutils.parsers.rst.directives.flag,
 
@@ -124,13 +131,15 @@ class Module(Directive):
     def get_id(self):
         return "mod {}{}".format(self.current_module_prefix(), self.arguments[0])
 
+    def make_signature_nodes(self, functor_parameters):
+        yield desc_annotation(self.get_header_prefix())
+        yield desc_name(self.arguments[0])
+        yield desc_annotation(self.get_header_suffix(functor_parameters))
+
     def get_header_prefix(self):
         return "module "
 
-    def get_header_name(self):
-        return self.arguments[0]
-
-    def get_header_suffix(self):
+    def get_header_suffix(self, functor_parameters):
         alias_of = self.options.get("alias_of")
         if alias_of is None:
             contents_from = self.options.get("contents_from")
@@ -138,8 +147,10 @@ class Module(Directive):
                 contents_from = ""
             else:
                 contents_from = "{} = ".format(contents_from)
-            # @todo " : functor(A: ...)(B: ...) -> sig" when there are functor parameters in the content
-            return " : {}sig".format(contents_from)
+            if functor_parameters.children:
+                return " : {}functor".format(contents_from, functor_parameters)
+            else:
+                return " : {}sig".format(contents_from)
         else:
             return " = {}".format(alias_of)
 
@@ -150,7 +161,7 @@ class Module(Directive):
             return None
 
 
-class ModuleType(Directive):
+class ModuleType(Container):
     option_spec = {
         "noindex": docutils.parsers.rst.directives.flag,
 
@@ -167,23 +178,22 @@ class ModuleType(Directive):
     def get_header_prefix(self):
         return "module type "
 
-    def get_header_name(self):
-        return self.arguments[0]
-
-    def get_header_suffix(self):
+    def get_header_suffix(self, functor_parameters):
         contents_from = self.options.get("contents_from")
         if contents_from is None:
             contents_from = ""
         else:
             contents_from = "{} = ".format(contents_from)
-        # @todo " = functor(A: ...)(B: ...) -> sig" when there are functor parameters in the content
-        return " = {}sig".format(contents_from)
+        if functor_parameters.children:
+            return " = {}functor".format(contents_from, functor_parameters)
+        else:
+            return " = {}sig".format(contents_from)
 
     def get_footer(self):
         return "end"
 
 
-class FunctorParameter(Directive):
+class FunctorParameter(Module):
     option_spec = {
         "contents_from": docutils.parsers.rst.directives.unchanged,
     }
@@ -195,21 +205,10 @@ class FunctorParameter(Directive):
         return None
 
     def get_header_prefix(self):
-        return "functor parameter "
-
-    def get_header_name(self):
-        return self.arguments[0]
-
-    def get_header_suffix(self):
-        contents_from = self.options.get("contents_from")
-        if contents_from is None:
-            contents_from = ""
-        else:
-            contents_from = "{} = ".format(contents_from)
-        return " : {}sig".format(contents_from)
+        return "("
 
     def get_footer(self):
-        return "end"
+        return "end)"
 
 
 class Include(Directive):
@@ -231,20 +230,20 @@ class Include(Directive):
     def get_index_entry(self):
         return None
 
-    def get_header_prefix(self):
-        return "include "
+    def make_nodes(self, contents_node):
+        yield desc_signature(*self.make_signature_nodes())
+        yield contents_node
+        yield desc_signature(desc_annotation("end"))
 
-    def get_header_name(self):
-        return self.options.get("contents_from")
+    def make_signature_nodes(self):
+        yield desc_annotation("include ")
 
-    def get_header_suffix(self):
-        if self.options.get("contents_from") is None:
-            return "sig"
+        contents_from = self.options.get("contents_from")
+        if contents_from is None:
+            yield desc_annotation("sig")
         else:
-            return " = sig"
-
-    def get_footer(self):
-        return "end"
+            yield desc_name(contents_from)
+            yield desc_annotation(" = sig")
 
 
 class Atom(Directive):
@@ -256,19 +255,18 @@ class Atom(Directive):
         return "{} {}".format(self.object_type, self.__full_name)
 
     def get_id(self):
-        return "{} {}{}".format(self.role, self.current_module_prefix(), self.get_header_name())
+        return "{} {}{}".format(self.role, self.current_module_prefix(), self.arguments[0])
 
-    def get_header_prefix(self):
-        return "{} ".format(self.object_type)
+    def make_nodes(self, contents_node):
+        yield desc_signature(*self.make_signature_nodes())
+        yield contents_node
 
-    def get_header_name(self):
-        return self.arguments[0]
-
-    def get_header_suffix(self):
-        return None
-
-    def make_footer_node(self):
-        return None
+    def make_signature_nodes(self):
+        yield desc_annotation(self.get_header_prefix())
+        yield desc_name(self.arguments[0])
+        header_suffix = self.get_header_suffix()
+        if header_suffix is not None:
+            yield desc_annotation(header_suffix)
 
 
 class Value(Atom):
@@ -280,6 +278,9 @@ class Value(Atom):
 
         "type": docutils.parsers.rst.directives.unchanged,
     }
+
+    def get_header_prefix(self):
+        return "val "
 
     def get_header_suffix(self):
         type_ = self.options.get("type")
@@ -336,6 +337,9 @@ class Exception(Atom):
 
         "payload": docutils.parsers.rst.directives.unchanged,
     }
+
+    def get_header_prefix(self):
+        return "exception "
 
     def get_header_suffix(self):
         payload = self.options.get("payload")

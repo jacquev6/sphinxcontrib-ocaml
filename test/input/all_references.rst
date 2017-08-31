@@ -84,6 +84,28 @@ Type: :typ:`.Container$t`, value: :val:`.Container$v`, exception: :exn:`.Contain
 
 Type: :typ:`$t`, value: :val:`$v`, exception: :exn:`$e`, module type: :modtyp:`$MT` and module: :mod:`$M`.
 
+.. module_type:: FunctorType
+
+    .. functor_parameter:: Container
+
+        .. type:: t'
+
+        .. val:: v'
+
+        .. exception:: e'
+
+        .. module_type:: MT'
+
+        .. module:: M'
+
+Type: :typ:`FunctorType:Container$t'`, value: :val:`FunctorType:Container$v'`, exception: :exn:`FunctorType:Container$e'`, module type: :modtyp:`FunctorType:Container$MT'` and module: :mod:`FunctorType:Container$M'`.
+
+Type: :typ:`~FunctorType:Container$t'`, value: :val:`~FunctorType:Container$v'`, exception: :exn:`~FunctorType:Container$e'`, module type: :modtyp:`~FunctorType:Container$MT'` and module: :mod:`~FunctorType:Container$M'`.
+
+Type: :typ:`:Container$t'`, value: :val:`:Container$v'`, exception: :exn:`:Container$e'`, module type: :modtyp:`:Container$MT'` and module: :mod:`:Container$M'`.
+
+Type: :typ:`$t'`, value: :val:`$v'`, exception: :exn:`$e'`, module type: :modtyp:`$MT'` and module: :mod:`$M'`.
+
 Elements with same name
 -----------------------
 

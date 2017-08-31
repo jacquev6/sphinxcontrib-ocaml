@@ -12,6 +12,10 @@ Autodoc
 
 .. autoocamlmodule:: KnownBugModTypeNotFound
 
+.. @todo For FunctorWithIdentifierContents, display  module type FunctorWithIdentifierContents = functor (A : ...) -> Signature = sig
+.. Currently, the "Signature = " is before "functor".
+.. This is because ocaml-autodoc outputs FunctorWithIdentifierContents exactly like FunctorAlias.
+
 .. autoocamlmodule:: ModuleTypes
 
 .. autoocamlmodule:: Modules

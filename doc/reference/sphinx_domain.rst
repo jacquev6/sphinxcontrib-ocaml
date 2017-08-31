@@ -334,7 +334,34 @@ Functors
                 :noindex:
                 :type: int
 
-    The ``:contents_from:`` option is also applicable to module types::
+    ::
+
+        .. module_type:: FunctorType
+
+            .. functor_parameter:: Parameter
+
+                .. val:: n
+                    :type: int
+
+            .. val:: m
+                :type: int
+
+    ..
+
+        .. module_type:: FunctorType
+            :noindex:
+
+            .. functor_parameter:: Parameter
+
+                .. val:: n
+                    :noindex:
+                    :type: int
+
+            .. val:: m
+                :noindex:
+                :type: int
+
+    The ``:contents_from:`` option is also applicable to functor parameters::
 
         .. module:: Functor2
 

@@ -305,9 +305,7 @@ There should be no contents in that case:</p>
 <dt id="mod MyAlias">
 <em class="property">module </em><code class="descname">MyAlias</code><em class="property"> = Original</em><a class="headerlink" href="#mod MyAlias" title="Permalink to this definition">¶</a></dt>
 <dd><p>Some documentation for <em>MyAlias</em>.</p>
-</dd><dt>
-</dt>
-</dl>
+</dd></dl>
 
 </div></blockquote>
 <p>If the module get its contents from something else (<em>e.g</em> a module type, a functor application, <em>etc.</em>),
@@ -406,20 +404,22 @@ this can be documented using the <code class="docutils literal"><span class="pre
 <blockquote>
 <div><dl class="module">
 <dt id="mod Functor">
-<em class="property">module </em><code class="descname">Functor</code><em class="property"> : sig</em><a class="headerlink" href="#mod Functor" title="Permalink to this definition">¶</a></dt>
+<em class="property">module </em><code class="descname">Functor</code><em class="property"> : functor</em><a class="headerlink" href="#mod Functor" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="functor_parameter">
 <dt>
-<em class="property">functor parameter </em><code class="descname">Parameter</code><em class="property"> : sig</em></dt>
+<em class="property">(</em><code class="descname">Parameter</code><em class="property"> : sig</em></dt>
 <dd><dl class="val">
 <dt id="val Functor.Parameter$n">
 <em class="property">val </em><code class="descname">n</code><em class="property">: int</em><a class="headerlink" href="#val Functor.Parameter$n" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd><dt>
-<em class="property">end</em></dt>
+<em class="property">end)</em></dt>
 </dl>
 
-<dl class="val">
+</dd><dt>
+<em class="property">-&gt; sig</em></dt>
+<dd><dl class="val">
 <dt id="val Functor.m">
 <em class="property">val </em><code class="descname">m</code><em class="property">: int</em><a class="headerlink" href="#val Functor.m" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -429,7 +429,46 @@ this can be documented using the <code class="docutils literal"><span class="pre
 </dl>
 
 </div></blockquote>
-<p>The <code class="docutils literal"><span class="pre">:contents_from:</span></code> option is also applicable to module types:</p>
+<div class="highlight-rst"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">module_type</span><span class="p">::</span> FunctorType
+
+<span class="p">    ..</span> <span class="ow">functor_parameter</span><span class="p">::</span> Parameter
+
+<span class="p">        ..</span> <span class="ow">val</span><span class="p">::</span> n
+            <span class="nc">:type:</span> <span class="nf">int</span>
+
+<span class="p">    ..</span> <span class="ow">val</span><span class="p">::</span> m
+        <span class="nc">:type:</span> <span class="nf">int</span>
+</pre></div>
+</div>
+<blockquote>
+<div><dl class="module_type">
+<dt id="modtyp FunctorType">
+<em class="property">module type </em><code class="descname">FunctorType</code><em class="property"> = functor</em><a class="headerlink" href="#modtyp FunctorType" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="functor_parameter">
+<dt>
+<em class="property">(</em><code class="descname">Parameter</code><em class="property"> : sig</em></dt>
+<dd><dl class="val">
+<dt id="val FunctorType:Parameter$n">
+<em class="property">val </em><code class="descname">n</code><em class="property">: int</em><a class="headerlink" href="#val FunctorType:Parameter$n" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end)</em></dt>
+</dl>
+
+</dd><dt>
+<em class="property">-&gt; sig</em></dt>
+<dd><dl class="val">
+<dt id="val FunctorType:m">
+<em class="property">val </em><code class="descname">m</code><em class="property">: int</em><a class="headerlink" href="#val FunctorType:m" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd><dt>
+<em class="property">end</em></dt>
+</dl>
+
+</div></blockquote>
+<p>The <code class="docutils literal"><span class="pre">:contents_from:</span></code> option is also applicable to functor parameters:</p>
 <div class="highlight-rst"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">module</span><span class="p">::</span> Functor2
 
 <span class="p">    ..</span> <span class="ow">functor_parameter</span><span class="p">::</span> Parameter
@@ -445,20 +484,22 @@ this can be documented using the <code class="docutils literal"><span class="pre
 <blockquote>
 <div><dl class="module">
 <dt id="mod Functor2">
-<em class="property">module </em><code class="descname">Functor2</code><em class="property"> : sig</em><a class="headerlink" href="#mod Functor2" title="Permalink to this definition">¶</a></dt>
+<em class="property">module </em><code class="descname">Functor2</code><em class="property"> : functor</em><a class="headerlink" href="#mod Functor2" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="functor_parameter">
 <dt>
-<em class="property">functor parameter </em><code class="descname">Parameter</code><em class="property"> : SomeModuleType = sig</em></dt>
+<em class="property">(</em><code class="descname">Parameter</code><em class="property"> : SomeModuleType = sig</em></dt>
 <dd><dl class="val">
 <dt id="val Functor2.Parameter$n">
 <em class="property">val </em><code class="descname">n</code><em class="property">: int</em><a class="headerlink" href="#val Functor2.Parameter$n" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd><dt>
-<em class="property">end</em></dt>
+<em class="property">end)</em></dt>
 </dl>
 
-<dl class="val">
+</dd><dt>
+<em class="property">-&gt; sig</em></dt>
+<dd><dl class="val">
 <dt id="val Functor2.m">
 <em class="property">val </em><code class="descname">m</code><em class="property">: int</em><a class="headerlink" href="#val Functor2.m" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -522,20 +563,22 @@ This is consistent with the default <a class="reference external" href="http://w
 <em class="property">module </em><code class="descname">Linked</code><em class="property"> : sig</em><a class="headerlink" href="#mod Linked" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="module">
 <dt id="mod Linked.M">
-<em class="property">module </em><code class="descname">M</code><em class="property"> : sig</em><a class="headerlink" href="#mod Linked.M" title="Permalink to this definition">¶</a></dt>
+<em class="property">module </em><code class="descname">M</code><em class="property"> : functor</em><a class="headerlink" href="#mod Linked.M" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="functor_parameter">
 <dt>
-<em class="property">functor parameter </em><code class="descname">P</code><em class="property"> : sig</em></dt>
+<em class="property">(</em><code class="descname">P</code><em class="property"> : sig</em></dt>
 <dd><dl class="val">
 <dt id="val Linked.M.P$v1">
 <em class="property">val </em><code class="descname">v1</code><a class="headerlink" href="#val Linked.M.P$v1" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd><dt>
-<em class="property">end</em></dt>
+<em class="property">end)</em></dt>
 </dl>
 
-<dl class="val">
+</dd><dt>
+<em class="property">-&gt; sig</em></dt>
+<dd><dl class="val">
 <dt id="val Linked.M.v2">
 <em class="property">val </em><code class="descname">v2</code><a class="headerlink" href="#val Linked.M.v2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
