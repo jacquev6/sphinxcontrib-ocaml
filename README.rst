@@ -37,8 +37,12 @@ Install both packages::
     $ pip3 install sphinxcontrib-ocaml
     $ opam install sphinxcontrib-ocaml
 
-Enable and configure the Sphinx extension in your `conf.py` file::
+Enable and configure the Sphinx extension in your ``conf.py`` file::
 
     extensions.append("ocaml")
     ocaml_source_directories = ["src"]
     ocaml_findlib_packages = ["batteries", "js_of_ocaml"]
+
+And document your module (in an ``.rst`` file)::
+
+    .. autoocamlmodule:: MyModule

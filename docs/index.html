@@ -67,10 +67,14 @@ We welcome all feedback from our daring early users.</p>
 $ opam install sphinxcontrib-ocaml
 </pre></div>
 </div>
-<p>Enable and configure the Sphinx extension in your <cite>conf.py</cite> file:</p>
+<p>Enable and configure the Sphinx extension in your <code class="docutils literal"><span class="pre">conf.py</span></code> file:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">extensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;ocaml&quot;</span><span class="p">)</span>
 <span class="n">ocaml_source_directories</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;src&quot;</span><span class="p">]</span>
 <span class="n">ocaml_findlib_packages</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;batteries&quot;</span><span class="p">,</span> <span class="s2">&quot;js_of_ocaml&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>And document your module (in an <code class="docutils literal"><span class="pre">.rst</span></code> file):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">autoocamlmodule</span><span class="p">::</span> <span class="n">MyModule</span>
 </pre></div>
 </div>
 </div>
