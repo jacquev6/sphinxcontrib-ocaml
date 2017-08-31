@@ -55,6 +55,8 @@ Values and types
 
             The coordinates.
 
+    Refer to values using the :rst:role:`val` role.
+
 .. rst:directive:: .. type:: name
 
     Document a type::
@@ -163,6 +165,8 @@ Values and types
 
             A list of integers.
 
+    Refer to types using the :rst:role:`typ` role.
+
 .. rst:directive:: .. exception:: name
 
     Document an exception::
@@ -217,6 +221,8 @@ Values and types
 
             :label b: b
 
+    Refer to exceptions using the :rst:role:`exn` role.
+
 Modules and module types
 ------------------------
 
@@ -238,6 +244,7 @@ Modules and module types
             Some documentation for *MyModule*.
 
             .. type:: t
+                :noindex:
 
     The module can be documented as an `alias <https://caml.inria.fr/pub/docs/manual-ocaml-4.05/extn.html#sec235>`_ using the ``:alias_of:`` option.
     There should be no contents in that case::
@@ -270,6 +277,9 @@ Modules and module types
             :contents_from: SomeModuleType
 
             .. type:: t
+                :noindex:
+
+    Refer to modules using the :rst:role:`mod` role.
 
 .. rst:directive:: .. module_type:: Name
 
@@ -289,8 +299,25 @@ Modules and module types
             Some documentation for *MyModuleType*.
 
             .. type:: t
+                :noindex:
 
-    @todo contents_from
+    The ``:contents_from:`` option is also applicable to module types::
+
+        .. module_type:: Contents
+            :contents_from: SomeModuleType
+
+            .. type:: t
+
+    ..
+
+        .. module_type:: Contents
+            :noindex:
+            :contents_from: SomeModuleType
+
+            .. type:: t
+                :noindex:
+
+    Refer to module types using the :rst:role:`modtyp` role.
 
 Functors
 --------
@@ -324,27 +351,84 @@ Functors
                 :noindex:
                 :type: int
 
-    @todo contents_from
+    The ``:contents_from:`` option is also applicable to module types::
+
+        .. module:: Functor2
+
+            .. functor_parameter:: Parameter
+                :contents_from: SomeModuleType
+
+                .. val:: n
+                    :type: int
+
+            .. val:: m
+                :type: int
+
+    ..
+
+        .. module:: Functor2
+            :noindex:
+
+            .. functor_parameter:: Parameter
+                :contents_from: SomeModuleType
+
+                .. val:: n
+                    :noindex:
+                    :type: int
+
+            .. val:: m
+                :noindex:
+                :type: int
 
 Roles
 =====
 
+Some `directives`_ create entries in the :ref:`general index <genindex>` and other `indices`_.
+You can avoid creating entries by using their ``:noindex:`` option. (That's what we've secretly done above, to avoid polluting the indices.)
+
 .. rst:role:: val
 
-    @todo
+    Refer to a :rst:dir:`val`: ``:val:`Linked.M.v2``` creates this link: :val:`Linked.M.v2`.
+
+    Notice that a dot is used to link to the contents of a :rst:dir:`module`.
+    To refer to the contents of a :rst:dir:`module_type`, use a colon: ``:val:`Linked.MT:v3``` produces :val:`Linked.MT:v3`.
+    And to refer to the contents of a :rst:dir:`functor_parameter`, use a dollar sign: ``:val:`Linked.M.P$v1``` produces :val:`Linked.M.P$v1`.
+
+    To create shorter references, you can strip the path by prefixing it with a tilde: ``:val:`~Linked.M.v2``` produces :val:`~Linked.M.v2`.
+    When there is no ambiguity, you can also omit a prefix of the path: ``:val:`.M.v2``` produces :val:`.M.v2` and ``:val:`.v2``` produces :val:`.v2`.
+    The shortened path must start with either a dot, a colon or a dollar sign according to the kind of the previous (omitted) part: ``:val:`$v1``` produces :val:`$v1` and ``:val:`:v3``` produces :val:`:v3`.
+    You can combine both: ``:val:`~.M.v2``` produces :val:`~.M.v2`.
+    This is consistent with the default `Python Sphinx domain <http://www.sphinx-doc.org/en/stable/domains.html#cross-referencing-python-objects>`_.
 
 .. rst:role:: typ
-
-    @todo
-
 .. rst:role:: exn
-
-    @todo
-
 .. rst:role:: mod
-
-    @todo
-
 .. rst:role:: modtyp
 
-    @todo
+    Referring to other kinds of elements follows the same rules:
+
+    - for :rst:dir:`type`, ``:typ:`.t2``` produces :typ:`.t2`
+    - for :rst:dir:`exception`, ``:exn:`.E2``` produces :exn:`.E2`
+    - for :rst:dir:`module`, ``:mod:`.M``` produces :mod:`.M`
+    - for :rst:dir:`module_type`, ``:modtyp:`.MT``` produces :modtyp:`.MT`
+
+.. module:: Linked
+
+    .. module:: M
+
+        .. functor_parameter:: P
+
+            .. val:: v1
+
+        .. val:: v2
+        
+        .. type:: t2
+
+        .. exception:: E2
+
+    .. module_type:: MT
+
+        .. val:: v3
+
+Indices
+=======
