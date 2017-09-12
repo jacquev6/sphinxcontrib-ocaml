@@ -19,6 +19,10 @@ module type MT = sig
   type (-'a, +'b) variances
   (** Doc' for variances *)
 
+  (** Doc for unused_parameters *)
+  type ('a, 'b) unused_parameters = [`Foo]
+  (** Doc' for unused_parameters *)
+
   (** Doc for record *)
   type record = {
     a: int; (** Doc for record.a *)

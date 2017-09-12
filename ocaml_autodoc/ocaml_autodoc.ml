@@ -568,13 +568,13 @@ end = struct
   module OfTypes = struct
     let string_of_type_parameter (t, v) =
       let variance = match Types.Variance.get_upper v with
-        | (true, true) ->
+        | (true, true)
+        | (false, false) ->
           ""
         | (true, false) ->
           "+"
         | (false, true) ->
           "-"
-        | (false, false) -> (*BISECT-IGNORE*) warn "TypeParameters.OfTypes.string_of_type_parameter: (false, false) (not supported)" ""
       in
       Frmt.apply "%s%s" variance (string_of_type_expr t)
 
