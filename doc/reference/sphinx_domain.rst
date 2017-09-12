@@ -15,7 +15,7 @@ or in the ``conf.py`` file:
 
 .. code-block:: python
 
-    default_domain = "ocaml"
+    primary_domain = "ocaml"
 
 Examples below assume the default domain is set.
 

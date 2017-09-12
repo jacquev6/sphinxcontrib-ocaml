@@ -40,6 +40,7 @@ Install both packages::
 Enable and configure the Sphinx extension in your ``conf.py`` file::
 
     extensions.append("ocaml")
+    primary_domain = "ocaml"  # Optional
     ocaml_source_directories = ["src"]
     ocaml_findlib_packages = ["batteries", "js_of_ocaml"]
 
