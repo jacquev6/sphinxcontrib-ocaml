@@ -119,11 +119,15 @@ class Generator:
         if kind is not None:
             yield "  :kind: {}".format(kind)
         for constructor in type_.pop("constructors"):
-            yield ""
-            yield "  :constructor {}: {}".format(constructor["name"], " ".join(x.strip() for x in constructor["doc"]))
+            if constructor["doc"]:
+                yield ""
+                yield "  :constructor {}: {}".format(
+                    constructor["name"], " ".join(x.strip() for x in constructor["doc"])
+                )
         for label in type_.pop("labels"):
-            yield ""
-            yield "  :label {}: {}".format(label["name"], " ".join(x.strip() for x in label["doc"]))
+            if label["doc"]:
+                yield ""
+                yield "  :label {}: {}".format(label["name"], " ".join(x.strip() for x in label["doc"]))
         yield ""
         yield from self.__indent(self.__doc(type_))
 
@@ -133,8 +137,9 @@ class Generator:
         if payload is not None:
             yield "  :payload: {}".format(payload)
         for label in exception_.pop("labels"):
-            yield ""
-            yield "  :label {}: {}".format(label["name"], " ".join(x.strip() for x in label["doc"]))
+            if label["doc"]:
+                yield ""
+                yield "  :label {}: {}".format(label["name"], " ".join(x.strip() for x in label["doc"]))
         yield ""
         yield from self.__indent(self.__doc(exception_))
 
