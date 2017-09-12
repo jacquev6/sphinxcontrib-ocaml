@@ -43,3 +43,4 @@ deploy:
     tags: true
     repo: jacquev6/sphinxcontrib-ocaml
     python: 3.6
+    condition: $OCAML_VERSION = 4.05.0
