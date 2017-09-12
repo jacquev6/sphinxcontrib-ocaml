@@ -15,15 +15,14 @@ install:
   - opam switch --yes $OCAML_VERSION
   - eval `opam config env`
   - opam switch
+  - opam pin add --yes General --dev-repo
   - opam install --yes General yojson
   - opam upgrade --yes
   - opam list
   - pip install --upgrade pip setuptools
   - pip install --upgrade coverage sphinx coveralls
 script:
-  - cd ocaml_autodoc
-  - ocamlbuild -use-ocamlfind -no-links ocaml_autodoc.byte
-  - cd ..
+  - jbuilder build ocaml_autodoc/ocaml_autodoc.exe
   - coverage run --branch --include "sphinxcontrib/*" $(which sphinx-build) test/input test/output -d build/test_doctrees
   - git diff --exit-code test
 after_success:

@@ -1,8 +1,0 @@
-true: warn(@A-4-33-44-45-48)
-true: safe_string
-true: strict_formats
-true: strict_sequence
-
-true: package(General)
-true: package(yojson)
-true: package(compiler-libs.common)

@@ -23,6 +23,6 @@ html_sidebars = {
 # Development version
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "sphinxcontrib")))
 extensions.append("ocaml")
-ocaml_autodoc_executable = "ocaml_autodoc/_build/ocaml_autodoc.byte"
+ocaml_autodoc_executable = "_build/default/ocaml_autodoc/ocaml_autodoc.exe"
 ocaml_source_directories = ["test/src/ocaml"]
 ocaml_findlib_packages = ["General"]

@@ -1,8 +1,5 @@
-# Copyright 2017 Vincent Jacques <vincent@vincent-jacques.net>
-
 opam-version: "1.2"
-name: "sphinxcontrib-ocaml"
-version: "0.2.0"
+version: "0.3.0"
 maintainer: "Vincent Jacques <vincent@vincent-jacques.net>"
 authors: "Vincent Jacques <vincent@vincent-jacques.net>"
 license: "MIT"
@@ -12,17 +9,13 @@ dev-repo: "https://github.com/jacquev6/sphinxcontrib-ocaml.git"
 bug-reports: "http://github.com/jacquev6/sphinxcontrib-ocaml/issues/"
 available: [ocaml-version = "4.05.0"]
 build: [
-  ["sh" "-c" "cd ocaml_autodoc; ocamlbuild -use-ocamlfind ocaml_autodoc.native"]
+  ["jbuilder" "build" "-p" name "-j" jobs]
 ]
-install: [
-  ["cp" "ocaml_autodoc/_build/ocaml_autodoc.native" "%{prefix}%/bin/sphinxcontrib-ocaml-autodoc"]
-]
-remove: [
-  ["rm" "-f" "%{prefix}%/bin/sphinxcontrib-ocaml-autodoc"]
+build-test: [
+  ["jbuilder" "runtest" "-p" name]
 ]
 depends: [
-  "ocamlbuild" {build}
-  "ocamlfind" {build}
-  "General"
+  "jbuilder" {build}
+  "General" {>= "0.4.0"}
   "yojson"
 ]

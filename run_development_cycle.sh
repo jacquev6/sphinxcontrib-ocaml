@@ -12,9 +12,11 @@ clear
 
 # Build
 
-cd ocaml_autodoc
-ocamlbuild -use-ocamlfind -no-links -package bisect_ppx ocaml_autodoc.byte
-cd ..
+# https://github.com/aantron/bisect_ppx/blob/master/doc/advanced.md#Jbuilder suggests
+# modifying the jbuild file for release. Let's modify it for tests instead.
+sed -i "s/^;\(.*bisect_ppx.*\)$/\1/" ocaml_autodoc/jbuild
+jbuilder build --dev ocaml_autodoc/ocaml_autodoc.exe
+sed -i "s/^\(.*bisect_ppx.*\)$/;\1/" ocaml_autodoc/jbuild
 
 # Test
 

@@ -7,8 +7,12 @@ author = '<a href="http://vincent-jacques.net/">Vincent Jacques</a>'
 copyright = ('2017 {} <script>var jacquev6_ribbon_github="{}"</script>'.format(author, project) +
              '<script src="https://jacquev6.github.io/ribbon.js"></script>')
 
+version = "0.3.0"  # @todo Remove duplication of version (/sphincontrib-ocaml.opam and /doc/conf.py)
+release = version
+
 master_doc = "index"
 extensions = []
+nitpicky = True
 
 # http://www.sphinx-doc.org/en/stable/ext/githubpages.html
 extensions.append("sphinx.ext.githubpages")
