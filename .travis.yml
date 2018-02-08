@@ -20,7 +20,7 @@ install:
   - opam upgrade --yes
   - opam list
   - pip install --upgrade pip setuptools
-  - pip install --upgrade coverage sphinx coveralls
+  - pip install --upgrade coverage sphinx=1.6.6 coveralls
 script:
   - jbuilder build ocaml_autodoc/ocaml_autodoc.exe
   - coverage run --branch --include "sphinxcontrib/*" $(which sphinx-build) test/input test/output -d build/test_doctrees
