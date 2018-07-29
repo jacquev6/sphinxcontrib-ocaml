@@ -171,7 +171,7 @@ class ModuleDocumenter(sphinx.ext.autodoc.Documenter):
                 break
         else:
             raise SphinxError('%s.mli not found in any ocaml_source_directories' %
-                            module_name)
+                              module_name)
 
         includes = self.env.config.ocaml_include_directories + [
             subprocess.run(
