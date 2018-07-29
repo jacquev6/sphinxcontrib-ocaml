@@ -9,6 +9,9 @@ import docutils
 import sphinx
 
 from sphinx.addnodes import desc, desc_content
+from sphinx.util import logging
+
+logger = logging.getLogger(__name__)
 
 
 def desc_annotation(s):
@@ -77,8 +80,7 @@ class Directive(docutils.parsers.rst.Directive):
         ident = self.get_id()
         if ident is not None:
             if ident in self.state.document.ids:
-                # @todo Use Sphinx's warnings and errors infrastructure
-                print("WARNING: Duplicate:", ident)
+                logger.warning('Duplicate: %s' % ident, subtype='ocaml')
             header_node["first"] = False
             header_node["ids"].append(ident)
 
@@ -417,8 +419,8 @@ class OCamlDomain(sphinx.domains.Domain):
             else:
                 todocname = None
                 if matches:
-                    # @todo Use Sphinx's warnings and errors infrastructure
-                    print("ERROR: multiple matches for target '{}'".format(target))
+                    logger.error("multiple matches for target '%s'" %
+                                 target, subtype='ocaml')
         else:
             todocname = data.get(target)
         if todocname:
