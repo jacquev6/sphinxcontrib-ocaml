@@ -2,7 +2,9 @@
 
 # Copyright 2017 Vincent Jacques <vincent@vincent-jacques.net>
 
-set -o errexit
+# http://redsymbol.net/articles/unofficial-bash-strict-mode/
+set -euo pipefail
+IFS=$'\n\t'
 
 # Install dependencies
 
@@ -14,9 +16,9 @@ clear
 
 # https://github.com/aantron/bisect_ppx/blob/master/doc/advanced.md#Jbuilder suggests
 # modifying the jbuild file for release. Let's modify it for tests instead.
-sed -i "s/^;\(.*bisect_ppx.*\)$/\1/" ocaml_autodoc/jbuild
-jbuilder build --dev ocaml_autodoc/ocaml_autodoc.exe
-sed -i "s/^\(.*bisect_ppx.*\)$/;\1/" ocaml_autodoc/jbuild
+sed -i "s/^;\(.*bisect_ppx.*\)$/\1/" ocaml_autodoc/dune
+dune build ocaml_autodoc/ocaml_autodoc.exe
+sed -i "s/^\(.*bisect_ppx.*\)$/;\1/" ocaml_autodoc/dune
 
 # Test
 
@@ -44,7 +46,7 @@ coverage3 erase
 
 # Check
 
-pep8 --max-line-length=120 sphinxcontrib *.py doc/conf.py
+pycodestyle --max-line-length=120 sphinxcontrib *.py doc/conf.py
 
 # Install and use to build doc
 
