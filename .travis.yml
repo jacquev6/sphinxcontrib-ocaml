@@ -16,7 +16,7 @@ install:
   - eval `opam config env`
   - opam switch
   - opam pin add --yes General --dev-repo
-  - opam install --yes General yojson
+  - opam install --yes General yojson ocamlfind
   - opam upgrade --yes
   - opam list
   - pip install --upgrade pip setuptools
