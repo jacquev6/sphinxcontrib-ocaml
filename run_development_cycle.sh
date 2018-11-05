@@ -14,8 +14,8 @@ clear
 
 # Build
 
-# https://github.com/aantron/bisect_ppx/blob/master/doc/advanced.md#Jbuilder suggests
-# modifying the jbuild file for release. Let's modify it for tests instead.
+# https://github.com/aantron/bisect_ppx/blob/master/doc/advanced.md#Dune suggests
+# modifying the dune file for release. Let's modify it for tests instead.
 sed -i "s/^;\(.*bisect_ppx.*\)$/\1/" ocaml_autodoc/dune
 dune build ocaml_autodoc/ocaml_autodoc.exe
 sed -i "s/^\(.*bisect_ppx.*\)$/;\1/" ocaml_autodoc/dune
@@ -51,7 +51,7 @@ pycodestyle --max-line-length=120 sphinxcontrib *.py doc/conf.py
 # Install and use to build doc
 
 ./setup.py --quiet install --user
-opam pin --yes --no-action add .
+opam pin --yes --no-action add --kind=path .
 opam reinstall --yes sphinxcontrib-ocaml
 
 rm -rf docs build/sphinx

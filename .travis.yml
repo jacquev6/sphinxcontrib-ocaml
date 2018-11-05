@@ -4,24 +4,22 @@ python:
 sudo: false
 addons:
   apt:
-    sources:
-      - avsm
     packages:
       - aspcud
-      - opam
 install:
-  - opam init --yes
-  - opam update --yes
-  - opam switch --yes $OCAML_VERSION
-  - eval `opam config env`
-  - opam switch
-  - opam install --yes General yojson ocamlfind
-  - opam upgrade --yes
-  - opam list
+  - wget --output-document=$HOME/opam2 https://github.com/ocaml/opam/releases/download/2.0.1/opam-2.0.1-x86_64-linux
+  - chmod +x $HOME/opam2
+  - test -d $HOME/.opam/$OCAML_VERSION || $HOME/opam2 init --yes --disable-sandboxing --compiler=$OCAML_VERSION
+  - $HOME/opam2 update --yes
+  - eval `$HOME/opam2 config env`
+  - $HOME/opam2 switch list
+  - $HOME/opam2 install --yes dune General yojson ocamlfind
+  - $HOME/opam2 upgrade --yes
+  - $HOME/opam2 list
   - pip install --upgrade pip setuptools
   - pip install --upgrade coverage sphinx==1.6.6 alabaster==0.7.10 coveralls
 script:
-  - jbuilder build ocaml_autodoc/ocaml_autodoc.exe
+  - dune build ocaml_autodoc/ocaml_autodoc.exe
   - coverage run --branch --include "sphinxcontrib/*" $(which sphinx-build) test/input test/output -d build/test_doctrees
   - git diff --exit-code test
 after_success:
