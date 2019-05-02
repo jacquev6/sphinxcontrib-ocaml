@@ -2,7 +2,7 @@ open General.Abbr
 
 
 module J = struct
-  type t = Yojson.Basic.json
+  type t = Yojson.Basic.t
   type a = string * t
 
   let to_string = Yojson.Basic.pretty_to_string
