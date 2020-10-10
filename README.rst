@@ -11,6 +11,7 @@
     :target: https://github.com/jacquev6/sphinxcontrib-ocaml/stargazers
 
 .. contents::
+   :local:
 
 Introduction
 ============

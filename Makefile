@@ -22,7 +22,7 @@ clean:
 test: clean
 	coverage3 run --branch --include "sphinxcontrib/*" $$(which sphinx-build) test/input test/output -d build/test_doctrees
 	@echo
-	@echo "See test documentation in $(pwd)/test/output/index.html"
+	@echo "See test documentation in $$(pwd)/test/output/index.html"
 	@echo
 
 	bisect-summary bisect????.out
@@ -31,8 +31,8 @@ test: clean
 	@echo
 	bisect-ppx-report -I ocaml_autodoc -html ocaml_autodoc/_build/bisect bisect????.out
 	coverage3 html --directory build/coverage
-	@echo "See coverage reports in $(pwd)/ocaml_autodoc/_build/bisect/index.html"
-	@echo "and $(pwd)/build/coverage/index.html"
+	@echo "See coverage reports in $$(pwd)/ocaml_autodoc/_build/bisect/index.html"
+	@echo "and $$(pwd)/build/coverage/index.html"
 	@echo
 
 lint:
@@ -46,6 +46,6 @@ install:
 	./setup.py build_sphinx
 	cp -r build/sphinx/html docs
 	@echo
-	@echo "See documentation in $(pwd)/docs/index.html"
+	@echo "See documentation in $$(pwd)/docs/index.html"
 
 ci: clean deps lint build test install
