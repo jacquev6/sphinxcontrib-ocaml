@@ -1,3 +1,15 @@
+.. image:: https://img.shields.io/travis/jacquev6/sphinxcontrib-ocaml/master.svg
+    :target: https://travis-ci.org/jacquev6/sphinxcontrib-ocaml
+
+.. image:: https://img.shields.io/github/issues/jacquev6/sphinxcontrib-ocaml.svg
+    :target: https://github.com/jacquev6/sphinxcontrib-ocaml/issues
+
+.. image:: https://img.shields.io/github/forks/jacquev6/sphinxcontrib-ocaml.svg
+    :target: https://github.com/jacquev6/sphinxcontrib-ocaml/network
+
+.. image:: https://img.shields.io/github/stars/jacquev6/sphinxcontrib-ocaml.svg
+    :target: https://github.com/jacquev6/sphinxcontrib-ocaml/stargazers
+
 .. contents::
 
 Introduction
@@ -14,18 +26,6 @@ Its `documentation <http://jacquev6.github.io/sphinxcontrib-ocaml>`_
 and its `source code <https://github.com/jacquev6/sphinxcontrib-ocaml>`_ are on GitHub.
 
 Questions? Remarks? Bugs? Want to contribute? `Open an issue <https://github.com/jacquev6/sphinxcontrib-ocaml/issues>`__!
-
-.. image:: https://img.shields.io/travis/jacquev6/sphinxcontrib-ocaml/master.svg
-    :target: https://travis-ci.org/jacquev6/sphinxcontrib-ocaml
-
-.. image:: https://img.shields.io/github/issues/jacquev6/sphinxcontrib-ocaml.svg
-    :target: https://github.com/jacquev6/sphinxcontrib-ocaml/issues
-
-.. image:: https://img.shields.io/github/forks/jacquev6/sphinxcontrib-ocaml.svg
-    :target: https://github.com/jacquev6/sphinxcontrib-ocaml/network
-
-.. image:: https://img.shields.io/github/stars/jacquev6/sphinxcontrib-ocaml.svg
-    :target: https://github.com/jacquev6/sphinxcontrib-ocaml/stargazers
 
 Status
 ======
