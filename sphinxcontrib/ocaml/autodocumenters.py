@@ -163,7 +163,7 @@ class ModuleDocumenter(sphinx.ext.autodoc.Documenter):
         if self.env.config.ocaml_source_directories is None:
             raise SphinxError('Please set ocaml_source_directories in conf.py')
 
-        module_name = self.directive.arguments[0]
+        module_name = self.name
         for d in self.env.config.ocaml_source_directories:
             file_name = [f for f in os.listdir(d) if f.lower() == "{}.mli".format(module_name.lower())][0]
             interface_path = os.path.join(d, file_name)
