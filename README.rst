@@ -62,7 +62,7 @@ Install packages::
     $ pip3 install --user sphinx coverage pycodestyle
     $ make ci
 
-`The table of contents for Sphinx use of reStructuredText can be found here`_
+`The table of contents for Sphinx use of reStructuredText can be found here`_.
 Familiarize yourself with reStructuredText_ and read up on Domains_ and the `Domain API`_.
 Have a look at the Glossary, especially these terms:
 
