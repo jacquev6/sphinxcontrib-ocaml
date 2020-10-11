@@ -1,13 +1,13 @@
 language: python
 python:
-  - "3.6"
+  - "3.8"
 sudo: false
 addons:
   apt:
     packages:
       - aspcud
 install:
-  - wget --output-document=$HOME/opam2 https://github.com/ocaml/opam/releases/download/2.0.1/opam-2.0.1-x86_64-linux
+  - wget --output-document=$HOME/opam2 https://github.com/ocaml/opam/releases/download/2.0.7/opam-2.0.7-x86_64-linux
   - chmod +x $HOME/opam2
   - test -d $HOME/.opam/$OCAML_VERSION || $HOME/opam2 init --yes --disable-sandboxing --compiler=$OCAML_VERSION
   - $HOME/opam2 update --yes
@@ -17,10 +17,9 @@ install:
   - $HOME/opam2 upgrade --yes
   - $HOME/opam2 list
   - pip install --upgrade pip setuptools
-  - pip install --upgrade coverage sphinx==1.6.6 alabaster==0.7.10 coveralls
+  - pip install --upgrade coverage sphinx==1.7.0 alabaster==0.7.12 coveralls
 script:
-  - dune build ocaml_autodoc/ocaml_autodoc.exe
-  - coverage run --branch --include "sphinxcontrib/*" $(which sphinx-build) test/input test/output -d build/test_doctrees
+  - make ci
   - git diff --exit-code test
 after_success:
   - coveralls
@@ -39,5 +38,5 @@ deploy:
   on:
     tags: true
     repo: jacquev6/sphinxcontrib-ocaml
-    python: 3.6
+    python: 3.8
     condition: $OCAML_VERSION = 4.05.0
